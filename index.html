@@ -85,7 +85,7 @@
 <section id="contact" class="flat-section fade-in" style="background-color: #e0fbfc; color: #000;">
   <div class="container">
     <h2>의뢰 문의</h2>
-    <form id="contactForm">
+    <form id="contactForm" action="mailto:ssample3d@gmail.com" method="POST" enctype="text/plain">
       <label for="name">이름</label>
       <input type="text" name="name" id="name" required />
 
@@ -111,12 +111,6 @@
 </footer>
 
 <script src="main.js"></script>
-<script>
-document.getElementById('contactForm').addEventListener('submit', function(e) {
-  e.preventDefault();
-  alert('문의가 성공적으로 제출되었습니다!');
-  this.reset();
-});
-</script>
+
 </body>
 </html>
