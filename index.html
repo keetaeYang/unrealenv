@@ -24,17 +24,7 @@
 <li><button id="lang-toggle">EN</button></li>
 </ul>
 </nav>
-
-    <div class="hamburger" onclick="toggleMenu()">☰</div>
-    <div id="mobileNav" class="mobile-nav">
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </div>
-    
+<div class="hamburger" onclick="toggleMenu()">☰</div>
 </div>
 </header>
 <section class="hero fade-in" id="hero" style="background-image: url('assets/images/forest_hero.jpg');">
@@ -45,26 +35,28 @@
 <a class="btn secondary" href="#contact">의뢰 상담하기</a>
 </div>
 </section>
+
 <section class="flat-section fade-in" id="about" style="background-color: #fff;">
-<div class="container about-flex">
-<div class="about-text">
-<h2>회사 소개</h2>
-<p>
+  <div class="container about-flex">
+    <div class="about-text">
+      <h2>회사 소개</h2>
+      <p>
         SSample은 Unreal Engine 기반의 실사급 자연 및 건축 환경을 제작하는 스튜디오입니다.<br/><br/>
         우리는 게임, 영화, 전시 등 다양한 산업에 최적화된 3D 비주얼을 제공합니다.
       </p>
-</div>
-<div class="about-image" style="position: relative;">
-<video autoplay="" class="about-video" id="aboutVideo" loop="" muted="" playsinline="" poster="assets/images/about_placeholder.jpg">
-<source src="assets/videos/about_video.mp4" type="video/mp4"/>
-</video>
-<div style="position: absolute; top: 10px; right: 10px; z-index: 2;">
-<button onclick="toggleMute()" style="margin-right: 5px;">🔇/🔊</button>
-<button onclick="togglePlay()">⏯️</button>
-</div>
-</div>
-</div>
+    </div>
+    <div class="about-video-container">
+      <video autoplay class="about-video" id="aboutVideo" loop muted playsinline poster="assets/images/about_placeholder.jpg">
+        <source src="assets/videos/about_video.mp4" type="video/mp4"/>
+      </video>
+      <div class="video-controls">
+        <button onclick="toggleMute()">🔇/🔊</button>
+        <button onclick="togglePlay()">⏯️</button>
+      </div>
+    </div>
+  </div>
 </section>
+
 <section class="flat-section fade-in" id="portfolio" style="background-color: #fff;">
 <div class="container">
 <h2>포트폴리오</h2>
