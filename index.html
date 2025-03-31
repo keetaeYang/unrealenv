@@ -37,6 +37,7 @@
 </section>
 
 
+
 <section id="about" class="flat-section fade-in" style="background-color: #293241; color: #fff;">
   <div class="container about-flex">
     <div class="about-text">
@@ -46,14 +47,19 @@
         우리는 게임, 영화, 전시 등 다양한 산업에 최적화된 3D 비주얼을 제공합니다.
       </p>
     </div>
-    <div class="about-image">
-      <video autoplay muted loop playsinline class="about-video">
+    <div class="about-image" style="position: relative;">
+      <video id="aboutVideo" autoplay muted loop playsinline class="about-video" poster="assets/images/about_placeholder.jpg">
         <source src="assets/videos/about_video.mp4" type="video/mp4">
         브라우저가 동영상을 지원하지 않습니다.
       </video>
+      <div style="position: absolute; top: 10px; right: 10px; z-index: 2;">
+        <button onclick="toggleMute()" style="margin-right: 5px;">🔇/🔊</button>
+        <button onclick="togglePlay()">⏯️</button>
+      </div>
     </div>
   </div>
 </section>
+
 
 
 <section id="portfolio" class="flat-section fade-in" style="background-color: #3d5a80; color: #fff;">
@@ -118,6 +124,22 @@
 </footer>
 
 <script src="main.js"></script>
+
+
+<script>
+function toggleMute() {
+  const video = document.getElementById("aboutVideo");
+  video.muted = !video.muted;
+}
+function togglePlay() {
+  const video = document.getElementById("aboutVideo");
+  if (video.paused) {
+    video.play();
+  } else {
+    video.pause();
+  }
+}
+</script>
 
 </body>
 </html>
