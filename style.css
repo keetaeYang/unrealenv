@@ -165,7 +165,7 @@ header {
 /* Services Grid */
 .service-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 20px;
   text-align: center;
 }
@@ -390,7 +390,7 @@ body {
 /* Enlarge service cards */
 .service-grid div {
   height: 350px;
-  width: 350px;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -410,4 +410,17 @@ body {
 }
 .service-grid div span {
   color: #ffffff;
+}
+
+
+
+@media (max-width: 768px) {
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.service-grid {
+  max-width: 1000px;
+  margin: 0 auto;
 }
