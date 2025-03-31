@@ -48,10 +48,12 @@
       </p>
     </div>
     <div class="about-image" style="position: relative;">
-      <video id="aboutVideo" autoplay muted loop playsinline class="about-video" poster="assets/images/about_placeholder.jpg">
-        <source src="assets/videos/about_video.mp4" type="video/mp4">
-        브라우저가 동영상을 지원하지 않습니다.
-      </video>
+      
+<video id="aboutVideo" autoplay muted loop playsinline class="about-video" poster="assets/images/about_placeholder.jpg">
+  <source src="assets/videos/about_video.mp4" type="video/mp4">
+</video>
+<button class="video-toggle" onclick="togglePlay()">▶️</button>
+
       <div style="position: absolute; top: 10px; right: 10px; z-index: 2;">
         <button onclick="toggleMute()" style="margin-right: 5px;">🔇/🔊</button>
         <button onclick="togglePlay()">⏯️</button>
