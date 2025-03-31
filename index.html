@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SSample - Unreal Environment Studio</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header>
+    <div class="nav">
+        <a href="#hero" class="logo">
+            <img src="assets/images/logo.png" alt="SSample 로고" />
+        </a>
+        <nav class="desktop-nav">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><button id="lang-toggle">EN</button></li>
+            </ul>
+        </nav>
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+    </div>
+    <nav class="mobile-nav" id="mobileNav">
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><button onclick="toggleMenu()">닫기 ✕</button></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="hero" id="hero" style="background-image: url('assets/images/forest_hero.jpg');">
+    <div class="hero-content">
+        <h2 data-kr="당신의 상상은, 우리가 현실로 만듭니다." data-en="We turn your imagination into reality.">당신의 상상은, 우리가 현실로 만듭니다.</h2>
+        <p data-kr="언리얼 엔진으로 제작된 실사급 배경을 경험하세요." data-en="Experience photoreal environments powered by Unreal Engine.">언리얼 엔진으로 제작된 실사급 배경을 경험하세요.</p>
+        <a href="#portfolio" class="btn" data-kr="포트폴리오 보기" data-en="View Portfolio">포트폴리오 보기</a>
+    </div>
+</section>
+
+<script src="main.js"></script>
+</body>
+</html>
