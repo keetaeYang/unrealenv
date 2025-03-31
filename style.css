@@ -384,3 +384,12 @@ body {
 .service-grid div:nth-child(5) {
   background-image: url('assets/images/service_web.jpg');
 }
+
+
+
+/* Enlarge service cards */
+.service-grid div {
+  height: 300px;
+  font-size: 1.2em;
+  padding: 30px;
+}
