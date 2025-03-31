@@ -393,3 +393,14 @@ body {
   font-size: 1.2em;
   padding: 30px;
 }
+
+
+
+/* Force white and clearly visible text in service cards */
+.service-grid div {
+  color: #ffffff;
+  font-weight: 700;
+}
+.service-grid div span {
+  color: #ffffff;
+}
