@@ -85,6 +85,47 @@ header.scrolled {
   position: absolute; top: 10px; right: 10px;
 }
 
+.portfolio-grid {
+  display: flex; gap: 30px; justify-content: center; flex-wrap: wrap;
+  padding: 80px 20px;
+}
+
+.portfolio-item {
+  width: 30%; overflow: hidden; border-radius: 12px; transition: transform 0.3s;
+}
+
+.portfolio-item:hover { transform: scale(1.05); }
+
+.service-grid {
+  display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; padding: 80px 20px;
+}
+
+.service-card {
+  flex: 1 1 250px; border-radius: 15px; box-shadow: 0 8px 16px rgba(0,0,0,0.1); padding: 20px; transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-card:hover {
+  transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+#contactForm {
+  padding: 80px 20px; max-width: 600px; margin: auto;
+}
+
+#contactForm input, #contactForm textarea {
+  width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ddd; margin-bottom: 15px; transition: box-shadow 0.3s, border-color 0.3s;
+}
+
+#contactForm input:focus, #contactForm textarea:focus {
+  border-color: #38B6FF; box-shadow: 0 0 8px rgba(56,182,255,0.3);
+}
+
+#contactForm button {
+  background-color: #38B6FF; color: white; border: none; padding: 12px 24px; border-radius: 8px; cursor: pointer; transition: background-color 0.3s;
+}
+
+#contactForm button:hover { background-color: #309bd6; }
+
 footer {
   text-align: center; padding: 20px; background: #222; color: #fff;
 }
