@@ -2,7 +2,10 @@
 body {
     margin: 0;
     font-family: 'Noto Sans KR', sans-serif;
+    background: #fff;
+    color: #111;
 }
+
 header {
     position: fixed;
     width: 100%;
@@ -15,11 +18,10 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.5em 2em;
+    padding: 1em 2em;
 }
 .nav .logo img {
     height: 36px;
-    vertical-align: middle;
 }
 .nav ul {
     list-style: none;
@@ -36,15 +38,11 @@ header {
     font-size: 1em;
     cursor: pointer;
 }
-
-/* 햄버거 메뉴 */
 .hamburger {
     display: none;
     font-size: 1.8em;
     cursor: pointer;
 }
-
-/* 모바일 전용 네비게이션 */
 .mobile-nav {
     display: none;
     position: absolute;
@@ -69,19 +67,7 @@ header {
     border: none;
 }
 
-/* 반응형 */
-@media (max-width: 768px) {
-    .desktop-nav {
-        display: none;
-    }
-    .hamburger {
-        display: block;
-    }
-    .mobile-nav.show {
-        display: block;
-    }
-}
-
+/* Hero Section */
 .hero {
     background-size: cover;
     background-position: center;
@@ -101,4 +87,99 @@ header {
     color: white;
     text-decoration: none;
     border-radius: 5px;
+}
+.hero .btn.secondary {
+    background: transparent;
+    border: 2px solid white;
+    margin-left: 10px;
+}
+
+/* Global Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+/* Flat Sections */
+.flat-section h2, .flat-section h1 {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+}
+.flat-section p, .flat-section li {
+    font-size: 1.2em;
+    line-height: 1.8em;
+    max-width: 800px;
+    margin: auto;
+}
+.flat-section ul {
+    list-style: none;
+    padding: 0;
+}
+.flat-section li {
+    margin-bottom: 10px;
+}
+
+/* Gallery */
+.gallery {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+.gallery img {
+    width: 30%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Contact form */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 600px;
+    margin: auto;
+}
+input, textarea {
+    padding: 12px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+button[type="submit"] {
+    padding: 12px;
+    background: #38B6FF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Footer */
+footer {
+    background: #1a1a1a;
+    color: white;
+    text-align: center;
+    padding: 1.5em 1em;
+    font-size: 0.9em;
+    margin-top: 40px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .desktop-nav {
+        display: none;
+    }
+    .hamburger {
+        display: block;
+    }
+    .mobile-nav.show {
+        display: block;
+    }
+    .gallery img {
+        width: 100%;
+    }
 }
