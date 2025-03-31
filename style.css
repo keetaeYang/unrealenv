@@ -326,11 +326,55 @@ body {
   text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.8);
 }
 
+
+
+/* Page fade-in on load */
 .fade-page {
   animation: fadeInPage 1s ease-in;
 }
-
 @keyframes fadeInPage {
   from { opacity: 0; }
   to { opacity: 1; }
+}
+
+/* Service cards with background images + overlay + hover effect */
+.service-grid div {
+  background-size: cover;
+  background-position: center;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  text-shadow: 1px 1px 6px rgba(0,0,0,0.7);
+}
+.service-grid div::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: 0;
+}
+.service-grid div:hover {
+  transform: scale(1.03);
+}
+.service-grid div span {
+  position: relative;
+  z-index: 1;
+}
+
+/* Specific background image targets (customize images later) */
+.service-grid div:nth-child(1) {
+  background-image: url('assets/images/service_nature.jpg');
+}
+.service-grid div:nth-child(2) {
+  background-image: url('assets/images/service_architecture.jpg');
+}
+.service-grid div:nth-child(3) {
+  background-image: url('assets/images/service_cinematic.jpg');
+}
+.service-grid div:nth-child(4) {
+  background-image: url('assets/images/service_virtual.jpg');
+}
+.service-grid div:nth-child(5) {
+  background-image: url('assets/images/service_web.jpg');
 }
