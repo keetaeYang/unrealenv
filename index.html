@@ -36,28 +36,18 @@
   </div>
 </section>
 
-
-
 <section id="about" class="flat-section fade-in" style="background-color: #293241; color: #fff;">
   <div class="container about-flex">
     <div class="about-text">
       <h2>회사 소개</h2>
-      <p>
-        SSample은 Unreal Engine 기반의 실사급 자연 및 건축 환경을 제작하는 스튜디오입니다.<br><br>
-        우리는 게임, 영화, 전시 등 다양한 산업에 최적화된 3D 비주얼을 제공합니다.
-      </p>
+      <p>SSample은 Unreal Engine 기반의 실사급 자연 및 건축 환경을 제작하는 스튜디오입니다.<br><br>
+      우리는 게임, 영화, 전시 등 다양한 산업에 최적화된 3D 비주얼을 제공합니다.</p>
     </div>
-    <div class="about-image" style="position: relative;">
-      
-<video id="aboutVideo" autoplay muted loop playsinline class="about-video" poster="assets/images/about_placeholder.jpg">
-  <source src="assets/videos/about_video.mp4" type="video/mp4">
-</video>
-
+    <div class="about-image">
+      <img src="assets/images/about_bg.jpg" alt="회사 이미지">
     </div>
   </div>
 </section>
-
-
 
 <section id="portfolio" class="flat-section fade-in" style="background-color: #3d5a80; color: #fff;">
   <div class="container">
@@ -83,11 +73,11 @@
   <div class="container">
     <h2>서비스</h2>
     <div class="service-grid">
-      <div class="service-card" style="background-image: url('assets/images/service_nature.jpg');"><span>자연 환경의 리얼리즘 구현</span></div>
-      <div class="service-card" style="background-image: url('assets/images/service_architecture.jpg');"><span>건축 시각화의 새로운 기준</span></div>
-      <div class="service-card" style="background-image: url('assets/images/service_cinematic.jpg');"><span>영화급 시네마틱 배경 제작</span></div>
-      <div class="service-card" style="background-image: url('assets/images/service_virtual.jpg');"><span>가상 공간 최적화</span></div>
-      <div class="service-card" style="background-image: url('assets/images/service_web.jpg');"><span>웹 기반 3D 솔루션 제공</span></div>
+      <div>자연 환경의 리얼리즘 구현</div>
+      <div>건축 시각화의 새로운 기준</div>
+      <div>영화급 시네마틱 배경 제작</div>
+      <div>가상 공간 최적화</div>
+      <div>웹 기반 3D 솔루션 제공</div>
     </div>
   </div>
 </section>
@@ -121,13 +111,32 @@
 </footer>
 
 <script src="main.js"></script>
-
-
+<script>
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  alert('문의가 성공적으로 제출되었습니다!');
+  this.reset();
+});
+</script>
 
 <script>
-document.getElementById("contactForm").addEventListener("submit", function(e) {
-  e.preventDefault();
-  alert("의뢰 내용이 성공적으로 접수되었습니다. 실제 메일 서버는 아직 연결되어 있지 않습니다.");
+document.getElementById("contactForm").addEventListener("submit", function(event) {
+  event.preventDefault();
+  const form = event.target;
+  fetch(form.action, {
+    method: "POST",
+    body: new FormData(form),
+    headers: {
+      'Accept': 'application/json'
+    }
+  }).then(response => {
+    if (response.ok) {
+      alert("의뢰 내용이 성공적으로 제출되었습니다. 빠른 시일 내에 연락드리겠습니다.");
+      form.reset();
+    } else {
+      alert("전송 중 오류가 발생했습니다. 다시 시도해주세요.");
+    }
+  });
 });
 </script>
 </body>
