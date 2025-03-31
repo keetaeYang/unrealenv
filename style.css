@@ -284,3 +284,44 @@ footer {
 .portfolio-item:hover .caption-overlay {
   opacity: 1;
 }
+
+
+
+/* Base font size (desktop) */
+body {
+  font-size: 18px;
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+  .portfolio-item img {
+    height: 150px;
+  }
+}
+
+
+
+/* Button size and spacing for desktop */
+.hero .btn {
+  padding: 1em 2.5em;
+  font-size: 1.1em;
+  margin-top: 1.5em;
+}
+
+/* Responsive portfolio layout */
+@media (max-width: 768px) {
+  .portfolio-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+  .portfolio-item {
+    width: 100%;
+  }
+}
+
+/* Drop shadow on overlay text */
+.caption-overlay {
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.8);
+}
