@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>UnrealEnv 콘텐츠 작성기</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body { font-family: 'Montserrat', sans-serif; max-width: 700px; margin: 40px auto; padding: 20px; background: #f4f4f4; }
+    h2 { text-align: center; }
+    label { display: block; margin-top: 15px; font-weight: bold; }
+    input, textarea, select {
+      width: 100%; padding: 10px; margin-top: 5px;
+      border-radius: 5px; border: 1px solid #ccc;
+    }
+    button {
+      margin-top: 20px; background: #00bcd4; color: white;
+      padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;
+      font-weight: bold;
+    }
+    pre {
+      background: #333; color: #0f0;
+      padding: 15px; margin-top: 20px;
+      overflow-x: auto; border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+
+<h2>UnrealEnv 콘텐츠 작성기</h2>
+
+<label for="type">항목 종류</label>
+<select id="type">
+  <option value="portfolio">포트폴리오</option>
+  <option value="blog">블로그</option>
+</select>
+
+<label for="title">제목</label>
+<input type="text" id="title" placeholder="예: 안개 낀 숲">
+
+<label for="desc">설명</label>
+<textarea id="desc" rows="3" placeholder="예: 분위기 있는 포레스트 배경"></textarea>
+
+<label for="img">이미지 URL (포트폴리오 전용)</label>
+<input type="text" id="img" placeholder="https://images.unsplash.com/...">
+
+<label for="link">상세 링크 (블로그 전용)</label>
+<input type="text" id="link" placeholder="https://...">
+
+<button onclick="generateCode()">코드 생성</button>
+
+<pre id="output">// 여기에 결과 코드가 생성됩니다</pre>
+
+<script>
+  const fields = ['type', 'title', 'desc', 'img', 'link'];
+  fields.forEach(id => {
+    const el = document.getElementById(id);
+    el.value = localStorage.getItem(id) || '';
+    el.addEventListener('input', () => localStorage.setItem(id, el.value));
+  });
+
+  function generateCode() {
+    const type = typeEl.value;
+    const title = titleEl.value;
+    const desc = descEl.value;
+    const img = imgEl.value;
+    const link = linkEl.value;
+    let json = "";
+
+    if (type === "portfolio") {
+      json = `{
+  title: "${title}",
+  img: "${img}",
+  desc: "${desc}"
+},`;
+    } else {
+      json = `{
+  title: "${title}",
+  desc: "${desc}",
+  link: "${link}"
+},`;
+    }
+
+    document.getElementById("output").textContent = json;
+  }
+
+  const typeEl = document.getElementById("type");
+  const titleEl = document.getElementById("title");
+  const descEl = document.getElementById("desc");
+  const imgEl = document.getElementById("img");
+  const linkEl = document.getElementById("link");
+</script>
+
+</body>
+</html>
