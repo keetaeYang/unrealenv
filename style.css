@@ -207,16 +207,7 @@ header {
   }
 }
 
-.service-card span::before {
-  display: block;
-  font-size: 2em;
-  margin-bottom: 10px;
-}
-.service-card:nth-child(1) span::before { content: "🌿"; }
-.service-card:nth-child(2) span::before { content: "🏛️"; }
-.service-card:nth-child(3) span::before { content: "🎬"; }
-.service-card:nth-child(4) span::before { content: "🌐"; }
-.service-card:nth-child(5) span::before { content: "🧩"; }
+
 
 /* Brand color palette refinement */
 body {
@@ -226,39 +217,15 @@ body {
 .flat-section {
   padding: 80px 20px;
 }
-#about {
-  background-color: #1e2b38;
-}
-#portfolio {
-  background-color: #2d4a63;
-}
-#services {
-  background-color: #3f7089;
-}
-#contact {
-  background-color: #f1f4f8;
-  color: #111;
-}
-footer {
-  background-color: #1a1a1a;
-  color: #ccc;
-}
+#about { background-color: #fff; }
+#portfolio { background-color: #fff; }
+#services { background-color: #fff; }
+#contact { background-color: #fff; color: #000; }
+footer { background-color: #fff; color: #000; }
 
-#about {
-  background-color: #1e2b38;
-  background-image: radial-gradient(circle at top left, rgba(255,255,255,0.05) 10%, transparent 11%);
-  background-size: 40px 40px;
-}
-#portfolio {
-  background-color: #2d4a63;
-  background-image: linear-gradient(45deg, rgba(255,255,255,0.04) 25%, transparent 25%, transparent 75%, rgba(255,255,255,0.04) 75%);
-  background-size: 40px 40px;
-}
-#services {
-  background-color: #3f7089;
-  background-image: radial-gradient(circle at center, rgba(255,255,255,0.03) 20%, transparent 21%);
-  background-size: 50px 50px;
-}
+#about { background-color: #fff; }
+#portfolio { background-color: #fff; }
+#services { background-color: #fff; }
 
 
 .about-flex {
@@ -292,20 +259,4 @@ footer {
   }
 }
 
-.video-toggle {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 3em;
-  background: rgba(0, 0, 0, 0.5);
-  border: none;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 50%;
-  cursor: pointer;
-  z-index: 2;
-}
-.video-toggle:hover {
-  background: rgba(0, 0, 0, 0.8);
-}
+

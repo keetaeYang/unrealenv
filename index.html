@@ -52,12 +52,7 @@
 <video id="aboutVideo" autoplay muted loop playsinline class="about-video" poster="assets/images/about_placeholder.jpg">
   <source src="assets/videos/about_video.mp4" type="video/mp4">
 </video>
-<button class="video-toggle" onclick="togglePlay()">▶️</button>
 
-      <div style="position: absolute; top: 10px; right: 10px; z-index: 2;">
-        <button onclick="toggleMute()" style="margin-right: 5px;">🔇/🔊</button>
-        <button onclick="togglePlay()">⏯️</button>
-      </div>
     </div>
   </div>
 </section>
@@ -127,21 +122,6 @@
 
 <script src="main.js"></script>
 
-
-<script>
-function toggleMute() {
-  const video = document.getElementById("aboutVideo");
-  video.muted = !video.muted;
-}
-function togglePlay() {
-  const video = document.getElementById("aboutVideo");
-  if (video.paused) {
-    video.play();
-  } else {
-    video.pause();
-  }
-}
-</script>
 
 
 <script>
