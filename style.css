@@ -1,4 +1,12 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Pretendard:wght@400;600;700&display=swap');
+
+body {
+  font-family: 'Pretendard', 'Noto Sans KR', sans-serif;
+  background-color: #f8f9fa;
+  color: #222;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -508,4 +516,20 @@ body {
 footer {
   background-color: #1a1a1a;
   color: #ccc;
+}
+
+#about {
+  background-color: #1e2b38;
+  background-image: radial-gradient(circle at top left, rgba(255,255,255,0.05) 10%, transparent 11%);
+  background-size: 40px 40px;
+}
+#portfolio {
+  background-color: #2d4a63;
+  background-image: linear-gradient(45deg, rgba(255,255,255,0.04) 25%, transparent 25%, transparent 75%, rgba(255,255,255,0.04) 75%);
+  background-size: 40px 40px;
+}
+#services {
+  background-color: #3f7089;
+  background-image: radial-gradient(circle at center, rgba(255,255,255,0.03) 20%, transparent 21%);
+  background-size: 50px 50px;
 }

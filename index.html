@@ -98,7 +98,7 @@
 <section id="contact" class="flat-section fade-in" style="background-color: #e0fbfc; color: #000;">
   <div class="container">
     <h2>의뢰 문의</h2>
-    <form id="contactForm" action="mailto:ssample3d@gmail.com" method="POST" enctype="text/plain">
+    <form id="contactForm">
       <label for="name">이름</label>
       <input type="text" name="name" id="name" required />
 
@@ -141,5 +141,12 @@ function togglePlay() {
 }
 </script>
 
+
+<script>
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+  alert("의뢰 내용이 성공적으로 접수되었습니다. 실제 메일 서버는 아직 연결되어 있지 않습니다.");
+});
+</script>
 </body>
 </html>
