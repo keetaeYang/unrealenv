@@ -390,7 +390,7 @@ body {
 /* Enlarge service cards */
 .service-grid div {
   height: 350px;
-  width: 100%;
+  width: 350px;
   display: flex;
   align-items: center;
   justify-content: center;
