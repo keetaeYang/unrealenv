@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Pretendard:wght@400;600;700&display=swap');
+
+body {
+  font-family: 'Pretendard', 'Noto Sans KR', sans-serif;
+  background-color: #f8f9fa;
+  color: #222;
+}
 
 html {
   scroll-behavior: smooth;
@@ -163,249 +170,126 @@ header {
 }
 
 /* Services Grid */
+
 .service-grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 20px;
-  text-align: center;
-}
-.service-grid div {
-  background: rgba(255,255,255,0.4);
-  padding: 20px;
-  font-weight: bold;
-  border-radius: 8px;
-}
-
-/* Contact */
-form {
   display: flex;
-  flex-direction: column;
-  gap: 15px;
-  max-width: 600px;
-  margin: auto;
-}
-input, textarea {
-  padding: 12px;
-  font-size: 1em;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-button[type="submit"] {
-  padding: 12px;
-  background: #38B6FF;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-/* Footer */
-footer {
-  background: #1a1a1a;
-  color: white;
-  text-align: center;
-  padding: 1.5em 1em;
-  font-size: 0.9em;
-  margin-top: 40px;
-}
-
-/* Fade-in Animation */
-.fade-in {
-  opacity: 0;
-  transform: translateY(30px);
-}
-.fade-in-animate {
-  animation: fadeInUp 1s forwards;
-}
-@keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .desktop-nav {
-    display: none;
-  }
-  .hamburger {
-    display: block;
-  }
-  .mobile-nav.show {
-    display: block;
-  }
-  .about-flex {
-    flex-direction: column;
-    text-align: center;
-  }
-  .about-text, .about-image {
-    text-align: center;
-  }
-  .portfolio-item {
-    width: 100%;
-  }
-  .service-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-
-
-/* Portfolio hover caption with unified display */
-.portfolio-grid {
-  display: flex;
-  gap: 30px;
-  justify-content: center;
   flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+  align-items: stretch;
 }
-.portfolio-item {
-  position: relative;
-  width: 30%;
-  overflow: hidden;
-}
-.portfolio-item img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 12px;
-}
-.caption-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  background: rgba(0,0,0,0.6);
-  opacity: 0;
-  font-size: 1.4em;
-  font-weight: bold;
-  transition: opacity 0.3s ease-in-out;
-  border-radius: 12px;
-}
-.portfolio-item:hover .caption-overlay {
-  opacity: 1;
+.service-card {
+  flex: 0 1 calc(48% - 15px);
+  margin-bottom: 30px;
 }
 
-
-
-/* Base font size (desktop) */
-body {
-  font-size: 18px;
+.service-card:hover {
+  transform: scale(1.03);
 }
-
-@media (max-width: 768px) {
-  body {
-    font-size: 16px;
-  }
-  .portfolio-item img {
-    height: 150px;
-  }
-}
-
-
-
-/* Button size and spacing for desktop */
-.hero .btn {
-  padding: 1em 2.5em;
-  font-size: 1.1em;
-  margin-top: 1.5em;
-}
-
-/* Responsive portfolio layout */
-@media (max-width: 768px) {
-  .portfolio-grid {
-    flex-direction: column;
-    align-items: center;
-  }
-  .portfolio-item {
-    width: 100%;
-  }
-}
-
-/* Drop shadow on overlay text */
-.caption-overlay {
-  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.8);
-}
-
-
-
-/* Page fade-in on load */
-.fade-page {
-  animation: fadeInPage 1s ease-in;
-}
-@keyframes fadeInPage {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-/* Service cards with background images + overlay + hover effect */
-.service-grid div {
-  background-size: cover;
-  background-position: center;
-  color: white;
-  position: relative;
-  overflow: hidden;
-  transition: transform 0.3s ease;
-  text-shadow: 1px 1px 6px rgba(0,0,0,0.7);
-}
-.service-grid div::before {
+.service-card::before {
   content: "";
   position: absolute;
   inset: 0;
   background: rgba(0,0,0,0.4);
   z-index: 0;
 }
-.service-grid div:hover {
-  transform: scale(1.03);
-}
-.service-grid div span {
-  position: relative;
+.service-card span {
   z-index: 1;
+  position: relative;
 }
 
-/* Specific background image targets (customize images later) */
-.service-grid div:nth-child(1) {
-  background-image: url('assets/images/service_nature.jpg');
-}
-.service-grid div:nth-child(2) {
-  background-image: url('assets/images/service_architecture.jpg');
-}
-.service-grid div:nth-child(3) {
-  background-image: url('assets/images/service_cinematic.jpg');
-}
-.service-grid div:nth-child(4) {
-  background-image: url('assets/images/service_virtual.jpg');
-}
-.service-grid div:nth-child(5) {
-  background-image: url('assets/images/service_web.jpg');
+@media (max-width: 768px) {
+  .service-card {
+    width: 100%;
+  }
 }
 
-
-
-/* Enlarge service cards */
-.service-grid div {
-  height: 300px;
-  font-size: 1.2em;
-  padding: 30px;
+.service-card span::before {
+  display: block;
+  font-size: 2em;
+  margin-bottom: 10px;
 }
+.service-card:nth-child(1) span::before { content: "🌿"; }
+.service-card:nth-child(2) span::before { content: "🏛️"; }
+.service-card:nth-child(3) span::before { content: "🎬"; }
+.service-card:nth-child(4) span::before { content: "🌐"; }
+.service-card:nth-child(5) span::before { content: "🧩"; }
 
-
-
-/* Force white and clearly visible text in service cards */
-.service-grid div {
-  color: #ffffff;
-  font-weight: 700;
+/* Brand color palette refinement */
+body {
+  background-color: #f8f9fa;
+  color: #222;
 }
-.service-grid div span {
-  color: #ffffff;
+.flat-section {
+  padding: 80px 20px;
 }
 
 
+
+
+
+
+
+
+
+
+
+.about-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: center;
+  justify-content: space-between;
+}
+.about-text {
+  flex: 1 1 50%;
+  text-align: left;
+}
+.about-image {
+  flex: 1 1 40%;
+}
+.about-image video.about-video {
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+/* Mobile fallback: stack layout */
+@media (max-width: 768px) {
+  .about-flex {
+    flex-direction: column;
+    text-align: center;
+  }
+  .about-text, .about-image {
+    flex: 1 1 100%;
+  }
+}
+
+.video-toggle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3em;
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 2;
+}
+.video-toggle:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+
+
+
+
+#
 #about, #portfolio, #services, #contact, footer {
   background-color: #ffffff;
   color: #000000;
