@@ -27,12 +27,3 @@ document.addEventListener("DOMContentLoaded", () => {
 function toggleMenu() {
   document.getElementById("mobileNav").classList.toggle("show");
 }
-
-window.addEventListener('scroll', function() {
-  const header = document.querySelector('header');
-  header.classList.toggle('scrolled', window.scrollY > 50);
-});
-
-function toggleMenu() {
-  document.getElementById("mobileNav").classList.toggle("show");
-}
