@@ -325,3 +325,12 @@ body {
 .caption-overlay {
   text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.8);
 }
+
+.fade-page {
+  animation: fadeInPage 1s ease-in;
+}
+
+@keyframes fadeInPage {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
