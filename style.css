@@ -6,20 +6,27 @@ body {
 header {
     position: fixed;
     width: 100%;
-    background: rgba(0, 0, 0, 0.7);
+    background: #000;
     color: white;
     z-index: 1000;
+    box-shadow: 0 0 10px rgba(0,0,0,0.4);
 }
 .nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1em 2em;
+    padding: 0.5em 2em;
+}
+.nav .logo img {
+    height: 36px;
+    vertical-align: middle;
 }
 .nav ul {
     list-style: none;
     display: flex;
     gap: 20px;
+    margin: 0;
+    padding: 0;
 }
 .nav a, .nav button {
     color: white;
@@ -29,7 +36,55 @@ header {
     font-size: 1em;
     cursor: pointer;
 }
+
+/* 햄버거 메뉴 */
+.hamburger {
+    display: none;
+    font-size: 1.8em;
+    cursor: pointer;
+}
+
+/* 모바일 전용 네비게이션 */
+.mobile-nav {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    padding: 1em;
+}
+.mobile-nav ul {
+    list-style: none;
+    padding: 0;
+}
+.mobile-nav li {
+    margin: 1em 0;
+}
+.mobile-nav a, .mobile-nav button {
+    color: white;
+    font-size: 1.2em;
+    text-decoration: none;
+    background: none;
+    border: none;
+}
+
+/* 반응형 */
+@media (max-width: 768px) {
+    .desktop-nav {
+        display: none;
+    }
+    .hamburger {
+        display: block;
+    }
+    .mobile-nav.show {
+        display: block;
+    }
+}
+
 .hero {
+    background-size: cover;
+    background-position: center;
     height: 100vh;
     display: flex;
     align-items: center;
@@ -46,25 +101,4 @@ header {
     color: white;
     text-decoration: none;
     border-radius: 5px;
-}
-section {
-    padding: 100px 20px;
-    max-width: 1000px;
-    margin: auto;
-}
-.gallery {
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-.gallery img {
-    width: 30%;
-    border-radius: 10px;
-}
-footer {
-    background: #1a1a1a;
-    color: white;
-    text-align: center;
-    padding: 1em;
 }

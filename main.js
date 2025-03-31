@@ -1,4 +1,8 @@
 
+function toggleMenu() {
+    document.getElementById("mobileNav").classList.toggle("show");
+}
+
 document.getElementById('lang-toggle').addEventListener('click', () => {
     const elements = document.querySelectorAll('[data-kr]');
     const isKR = document.documentElement.lang === 'ko';
