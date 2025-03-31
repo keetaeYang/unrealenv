@@ -23,3 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
     el.classList.add('fade-in-animate');
   });
 });
+
+function toggleMenu() {
+  document.getElementById("mobileNav").classList.toggle("show");
+}
