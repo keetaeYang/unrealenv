@@ -8,7 +8,12 @@ const portfolioData = [
 const blogPosts = [
   { title: "언리얼 엔진 조명 전략", desc: "Lumen과 GI를 활용한 조명 구성 팁", link: "#" },
   { title: "Megascan 배경 제작", desc: "고퀄리티 환경 구현 팁", link: "#" },
-  { title: "효율적인 포트폴리오 구성", desc: "이미지 배열과 설명 작성 요령", link: "#" }
+  { title: "효율적인 포트폴리오 구성", desc: "이미지 배열과 설명 작성 요령", link: "#" },
+{
+  title: "테스트",
+  desc: "테스트",
+  link: "blog-lighting.html"
+}
 ];
 
 // 렌더링
