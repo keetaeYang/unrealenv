@@ -6,9 +6,10 @@ body {
 header {
     position: fixed;
     width: 100%;
-    background: rgba(0, 0, 0, 0.7);
+    background: #000;
     color: white;
     z-index: 1000;
+    box-shadow: 0 0 10px rgba(0,0,0,0.4); /* 입체감 */
 }
 .nav {
     display: flex;
@@ -67,4 +68,41 @@ footer {
     color: white;
     text-align: center;
     padding: 1em;
+}
+/* 햄버거 메뉴 */
+.hamburger {
+    display: none;
+    font-size: 1.8em;
+    cursor: pointer;
+}
+
+/* 모바일 전용 네비게이션 */
+.mobile-nav {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    padding: 1em;
+}
+.mobile-nav ul {
+    list-style: none;
+    padding: 0;
+}
+.mobile-nav li {
+    margin: 1em 0;
+}
+
+/* 반응형 */
+@media (max-width: 768px) {
+    .desktop-nav {
+        display: none;
+    }
+    .hamburger {
+        display: block;
+    }
+    .mobile-nav.show {
+        display: block;
+    }
 }
