@@ -8,3 +8,8 @@ document.getElementById('lang-toggle').addEventListener('click', () => {
     });
     document.getElementById('lang-toggle').textContent = isKR ? 'KR' : 'EN';
 });
+
+function toggleMenu() {
+    document.getElementById("mobileNav").classList.toggle("show");
+}
+
