@@ -10,8 +10,9 @@
 <body>
 <header>
   <div class="nav">
-    <a href="#hero" class="logo">
+    <a href="#hero" class="logo" style="display:flex;align-items:center;gap:10px;">
       <img src="assets/images/logo.png" alt="SSample 로고" />
+      <span style="color:white;font-weight:bold;font-size:1.2em;">SSample</span>
     </a>
     <nav class="desktop-nav">
       <ul>
@@ -39,8 +40,8 @@
   <div class="container about-flex">
     <div class="about-text">
       <h2>회사 소개</h2>
-      <p>SSample은 Unreal Engine을 기반으로 실사급 자연, 도시, 건축 환경을 제작하는 전문 스튜디오입니다.<br><br>
-      우리는 창의적인 시각화와 기술적 전문성을 결합하여 게임, 영화, 전시, 광고 분야에 최적화된 3D 환경을 제공합니다.</p>
+      <p>SSample은 Unreal Engine 기반의 실사급 자연 및 건축 환경을 제작하는 스튜디오입니다.<br><br>
+      우리는 게임, 영화, 전시 등 다양한 산업에 최적화된 3D 비주얼을 제공합니다.</p>
     </div>
     <div class="about-image">
       <img src="assets/images/about_bg.jpg" alt="회사 이미지">
@@ -51,21 +52,19 @@
 <section id="portfolio" class="flat-section fade-in" style="background-color: #3d5a80; color: #fff;">
   <div class="container">
     <h2>포트폴리오</h2>
-    <div class="gallery">
-      <div class="slide active">
-        <img src="assets/images/portfolio_city.jpg" alt="도시 배경" />
-        <div class="caption">도시 야경</div>
+    <div class="portfolio-grid">
+      <div class="portfolio-item">
+        <img src="assets/images/portfolio_city.jpg" alt="도시 야경" />
+        <div class="caption-overlay">도시 야경</div>
       </div>
-      <div class="slide">
+      <div class="portfolio-item">
         <img src="assets/images/portfolio_stage.jpg" alt="아이돌 무대" />
-        <div class="caption">아이돌 무대</div>
+        <div class="caption-overlay">아이돌 무대</div>
       </div>
-      <div class="slide">
+      <div class="portfolio-item">
         <img src="assets/images/portfolio_cafe.jpg" alt="감성 공간" />
-        <div class="caption">감성 카페</div>
+        <div class="caption-overlay">감성 공간</div>
       </div>
-      <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
-      <button class="next" onclick="changeSlide(1)">&#10095;</button>
     </div>
   </div>
 </section>
@@ -73,13 +72,13 @@
 <section id="services" class="flat-section fade-in" style="background-color: #98c1d9; color: #000;">
   <div class="container">
     <h2>서비스</h2>
-    <ul>
-      <li>실사급 자연 환경 제작</li>
-      <li>건축/인테리어 시각화</li>
-      <li>영화/게임용 배경</li>
-      <li>시네마틱 영상 시퀀스</li>
-      <li>웹용 씬 최적화</li>
-    </ul>
+    <div class="service-grid">
+      <div>자연 환경의 리얼리즘 구현</div>
+      <div>건축 시각화의 새로운 기준</div>
+      <div>영화급 시네마틱 배경 제작</div>
+      <div>가상 공간 최적화</div>
+      <div>웹 기반 3D 솔루션 제공</div>
+    </div>
   </div>
 </section>
 
@@ -88,19 +87,19 @@
     <h2>의뢰 문의</h2>
     <form id="contactForm">
       <label for="name">이름</label>
-      <input type="text" name="name" id="name" placeholder="이름을 입력하세요" required />
+      <input type="text" name="name" id="name" required />
 
       <label for="email">이메일</label>
-      <input type="email" name="email" id="email" placeholder="example@email.com" required />
+      <input type="email" name="email" id="email" required />
 
       <label for="budget">예산</label>
-      <input type="text" name="budget" id="budget" placeholder="예산 (선택)" />
+      <input type="text" name="budget" id="budget" />
 
       <label for="deadline">마감일</label>
       <input type="date" name="deadline" id="deadline" />
 
       <label for="message">요청사항</label>
-      <textarea name="message" id="message" rows="5" placeholder="요청 내용을 입력해주세요"></textarea>
+      <textarea name="message" id="message" rows="5"></textarea>
 
       <button type="submit">의뢰하기</button>
     </form>
