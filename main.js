@@ -1,38 +1,31 @@
-
-let currentSlide = 0;
-
-function showSlide(index) {
-  const slides = document.querySelectorAll('.slide');
-  slides.forEach((slide, i) => {
-    slide.classList.remove('active');
-    if (i === index) slide.classList.add('active');
-  });
-}
-
-function changeSlide(offset) {
-  const slides = document.querySelectorAll('.slide');
-  currentSlide = (currentSlide + offset + slides.length) % slides.length;
-  showSlide(currentSlide);
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-  showSlide(currentSlide);
-  const fadeEls = document.querySelectorAll('.fade-in');
-  fadeEls.forEach((el, idx) => {
-    el.style.animationDelay = `${idx * 0.3}s`;
-    el.classList.add('fade-in-animate');
-  });
-});
-
+// 모바일 메뉴 열기/닫기
 function toggleMenu() {
-  document.getElementById("mobileNav").classList.toggle("show");
+  const mobileNav = document.getElementById("mobileNav");
+  mobileNav.classList.toggle("show");
 }
 
-window.addEventListener('scroll', function() {
-  const header = document.querySelector('header');
-  header.classList.toggle('scrolled', window.scrollY > 50);
+// About 섹션 영상 제어
+function toggleMute() {
+  const video = document.getElementById("aboutVideo");
+  video.muted = !video.muted;
+}
+
+function togglePlay() {
+  const video = document.getElementById("aboutVideo");
+  if (video.paused) {
+    video.play();
+  } else {
+    video.pause();
+  }
+}
+
+// 문의폼 제출 알림
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("contactForm");
+  if (form) {
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      alert("의뢰 내용이 성공적으로 접수되었습니다. 실제 메일 서버는 아직 연결되어 있지 않습니다.");
+    });
+  }
 });
-
-function toggleMenu() {
-  document.getElementById("mobileNav").classList.toggle("show");
-}
