@@ -167,6 +167,7 @@ header {
 }
 
 /* About */
+
 .about-flex {
   display: flex;
   flex-wrap: wrap;
@@ -177,6 +178,9 @@ header {
 .about-text {
   flex: 1 1 50%;
   text-align: left;
+  font-size: 1.2em;     /* 기본보다 약간 큼 */
+  line-height: 1.8;      /* 줄 간격 넉넉히 */
+  color: #444;           /* 부드러운 회색톤 */
 }
 .about-image {
   flex: 1 1 45%;
@@ -255,14 +259,15 @@ header {
 /* Services */
 .service-card {
   display: flex;
-  align-items: center;
-  background-color: #f9fbfd;
+  flex-direction: row;
+  align-items: stretch;
+  background: #f9fbfd;
   border-radius: 15px;
-  padding: 20px;
-  margin-bottom: 30px;
+  overflow: hidden;
   box-shadow: 0 5px 10px rgba(0,0,0,0.05);
-  gap: 20px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 30px;
+  max-width: 900px; /* 카드가 너무 넓지 않도록 제한 */
+  margin: 0 auto 30px;
 }
 .service-card:hover {
   transform: translateY(-8px);
@@ -272,29 +277,50 @@ header {
   flex-direction: row-reverse;
 }
 .service-image-text {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   flex: 1;
+  position: relative;
 }
 .service-image-text p {
   text-align: right;
 }
 .service-img {
-  width: 80px;
-  height: 80px;
+  width: 100%;
+  height: 200px;
   object-fit: cover;
-  border-radius: 10px;
-  margin-bottom: 10px;
+  display: block;
 }
 .service-card p {
-  text-align: center;
-  font-size: 1.1em;
-  line-height: 1.6;
-  color: #333;
+  flex: 1;
+  padding: 20px;
+  text-align: left;
+  font-size: 1.2em;      /* 추가 */
+  line-height: 1.7;       /* 추가 */
+  color: #333;            /* 필요하면 색도 조절 */
+}
+.service-image-text h3 {
+  position: absolute;
+  bottom: 7px;
+  left: 12px;
+  color: white;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 6px 8px;
+  border-radius: 4px;
+  font-size: 1em;
+}
+.service-desc {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* ← 세로 중앙 정렬 핵심! */
+  padding: 20px;
+  text-align: left;
 }
 
-
+.service-desc p {
+  font-size: 1.05em;
+  line-height: 1.7;
+  color: #333;
+}
 
 /* Contact */
 #contactForm input, #contactForm textarea {
