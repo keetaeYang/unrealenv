@@ -148,8 +148,11 @@ header {
 }
 .about-image {
   flex: 1 1 45%;
+  position: relative;
 }
 .about-video {
+  position: relative;
+  z-index: 1;
   width: 100%;
   max-width: 600px;
   border-radius: 12px;
