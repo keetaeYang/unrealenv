@@ -321,54 +321,83 @@ body.fade-page.loaded {
   opacity: 1;
 }
 
-/* 섹션 스크롤 등장 애니메이션 */
-.fade-in {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
-}
-.fade-in.visible {
-  opacity: 1;
-  transform: translateY(0);
+.team-section {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
 }
 
-.card-flip {
+.team-member {
   perspective: 1000px;
 }
-.card-inner {
+
+.team-card {
+  width: 250px;
+  height: 350px;
   position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+
+.team-card:hover {
+  transform: rotateY(180deg);
+}
+
+.team-front, .team-back {
   width: 100%;
   height: 100%;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
-}
-.card-flip:hover .card-inner {
-  transform: rotateY(180deg);
-}
-.card-front, .card-back {
   position: absolute;
-  width: 100%;
   backface-visibility: hidden;
-  border-radius: 12px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.team-front {
   background: #fff;
-  padding: 20px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-.card-back {
+
+.team-front .team-photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.team-front h3 {
+  margin: 0;
+  font-size: 1.2em;
+  color: #333;
+}
+
+.team-back {
+  background: #f9f9f9;
   transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
 }
+
+.team-back p {
+  margin-bottom: 15px;
+  font-size: 0.9em;
+  color: #666;
+}
+
 .skills {
   display: flex;
   gap: 10px;
-  justify-content: center;
-  margin-bottom: 10px;
 }
+
 .skills img {
-  width: 32px;
-  height: 32px;
-}
-.card-back ul {
-  list-style: disc;
-  text-align: left;
-  padding-left: 20px;
+  width: 40px;
+  height: 40px;
 }
