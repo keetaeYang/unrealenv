@@ -186,20 +186,37 @@ header {
 .portfolio-item {
   width: 30%;
   position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+}
+.portfolio-item:hover .caption-overlay {
+  opacity: 1;
+  transform: translateY(0%);
 }
 .portfolio-item img {
   width: 100%;
   border-radius: 12px;
+  transition: transform 0.4s ease;
+}
+.portfolio-item:hover img {
+  transform: scale(1.05);
 }
 .caption-overlay {
   position: absolute;
-  bottom: 10px;
-  left: 10px;
-  background: rgba(0,0,0,0.7);
-  color: white;
-  padding: 5px 10px;
-  border-radius: 5px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  opacity: 0;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 20px;
+  border-radius: 0 0 12px 12px;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transform: translateY(20%);
+  pointer-events: none;
 }
+
 
 /* Services */
 .service-card {
