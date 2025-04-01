@@ -43,8 +43,6 @@ header {
   max-width: 160px !important;
   display: block;
 }
-
-
 .logo-text {
   font-weight: bold;
   font-size: 1.2em;
@@ -170,11 +168,9 @@ header {
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
-
 .video-controls button:hover {
   background-color: rgba(56,182,255,0.9);
 }
-
 
 /* Portfolio */
 .portfolio-grid {
@@ -216,7 +212,6 @@ header {
   transform: translateY(20%);
   pointer-events: none;
 }
-
 
 /* Services */
 .service-card {
