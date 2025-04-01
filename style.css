@@ -307,7 +307,20 @@ header {
   border-radius: 4px;
   font-size: 1em;
 }
+.service-desc {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* ← 세로 중앙 정렬 핵심! */
+  padding: 20px;
+  text-align: left;
+}
 
+.service-desc p {
+  font-size: 1.05em;
+  line-height: 1.7;
+  color: #333;
+}
 
 /* Contact */
 #contactForm input, #contactForm textarea {
