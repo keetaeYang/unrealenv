@@ -292,13 +292,13 @@ header {
 }
 .service-image-text h3 {
   position: absolute;
-  bottom: 15px;
-  left: 15px;
+  bottom: 8px;
+  left: 12px;
   color: white;
   background: rgba(0, 0, 0, 0.6);
-  padding: 8px 12px;
-  border-radius: 5px;
-  font-size: 1.1em;
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-size: 1em;
 }
 
 
