@@ -414,10 +414,28 @@ footer a:hover {
   text-decoration: underline;
 }
 
+#contactForm label {
+  display: block;
+  text-align: left;
+  font-weight: bold;
+  margin: 15px 0 5px;
+}
+
 #contact {
   background-color: rgba(240, 240, 240, 0.85); /* 부드러운 회색 + 약간 투명 */
 }
 #contactForm input,
 #contactForm textarea {
   background-color: white;
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    text-align: left; /* 🔥 입력 내용도 왼쪽 정렬 */
+    font-size: 1em;
+}
+
+#contactForm button {
+  margin-top: 20px;
+  font-weight: bold;
 }
