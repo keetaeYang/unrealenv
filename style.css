@@ -272,7 +272,7 @@ header {
   flex-wrap: wrap;
 }
 .team-member {
-  max-width: 250px;
+  flex: 1 1 320px;
   text-align: center;
 }
 .team-photo {
@@ -346,8 +346,8 @@ body.fade-page.loaded {
 }
 
 .team-card {
-  width: 260px;
-  height: 360px;
+  width: 320px;
+  height: 380px;
   position: relative;
   transition: transform 0.8s;
   transform-style: preserve-3d;
