@@ -32,14 +32,15 @@ h4 {
 header {
   position: fixed;
   top: 0;
-  font-size: 30px;
-  font-weight: 800;
-  background: #000; !important;
-  color: white;
-  letter-spacing: -0.5px
+  left: 0;
   width: 100%;
   z-index: 1000;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  background: #000 !important;
+  color: white;
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 .relative {
   position: relative;
@@ -78,7 +79,7 @@ header {
   color: white;
   background: none;
   border: none;
-  font-size: 1em;
+  font-size: 0.9em;
   cursor: pointer;
   padding-bottom: 4px;
   transition: all 0.3s ease;
