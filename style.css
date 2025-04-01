@@ -288,15 +288,18 @@ header {
 .service-card p {
   flex: 1;
   padding: 20px;
-  text-align: left;
+  text-align: center;
+  font-size: 1.1em;      /* 추가 */
+  line-height: 1.7;       /* 추가 */
+  color: #333;            /* 필요하면 색도 조절 */
 }
 .service-image-text h3 {
   position: absolute;
-  bottom: 8px;
+  bottom: 7px;
   left: 12px;
   color: white;
   background: rgba(0, 0, 0, 0.6);
-  padding: 6px 6px;
+  padding: 6px 8px;
   border-radius: 4px;
   font-size: 1em;
 }
