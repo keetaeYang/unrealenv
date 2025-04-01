@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>SSample - Unreal Environment Studio</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body class="fade-page">
+<header>
+    <div class="nav">
+        <a class="logo logo-flex" href="#hero">
+            <img src="assets/images/logo.png" alt="SSample 로고"/>
+            <span class="logo-text">SSample</span>
+        </a>
+        <nav class="desktop-nav">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+        <div id="mobileNav" class="mobile-nav">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</header>
+
+<section class="hero fade-in hero-bg" id="hero">
+    <div class="hero-content">
+        <h2>당신의 상상은, 우리가 현실로 만듭니다.</h2>
+        <p>언리얼 엔진으로 제작된 실사급 배경을 경험하세요.</p>
+        <a class="btn" href="#portfolio">포트폴리오 보기</a>
+        <a class="btn secondary" href="#contact">의뢰 상담하기</a>
+    </div>
+</section>
+
+<section class="flat-section fade-in" id="about">
+    <div class="container about-flex">
+        <div class="about-text">
+            <h2>회사 소개</h2>
+            <p>
+                SSample은 Unreal Engine 기반의 실사급 자연 및 건축 환경을 제작하는 스튜디오입니다.<br/><br/>
+                우리는 게임, 영화, 전시 등 다양한 산업에 최적화된 3D 비주얼을 제공합니다.
+            </p>
+        </div>
+        <div class="about-image relative">
+            <video muted autoplay class="about-video" id="aboutVideo" loop playsinline>
+                <source src="assets/videos/about_video.mp4" type="video/mp4" />
+            </video>
+            <div class="video-controls">
+                <button onclick="toggleMute()">🔇/🔊</button>
+                <button onclick="togglePlay()">⏯️</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="flat-section fade-in" id="portfolio">
+    <div class="container">
+        <h2>포트폴리오</h2>
+        <div class="portfolio-grid">
+            <div class="portfolio-item">
+                <img src="assets/images/portfolio_city.jpg" alt="도시 야경"/>
+                <div class="caption-overlay">도시 야경</div>
+            </div>
+            <div class="portfolio-item">
+                <img src="assets/images/portfolio_stage.jpg" alt="아이돌 무대"/>
+                <div class="caption-overlay">아이돌 무대</div>
+            </div>
+            <div class="portfolio-item">
+                <img src="assets/images/portfolio_cafe.jpg" alt="감성 공간"/>
+                <div class="caption-overlay">감성 공간</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="flat-section fade-in" id="services">
+    <div class="container">
+        <h2>서비스</h2>
+        <div class="service-card">
+            <div class="service-image-text">
+                <img src="assets/icons/nature.jpg" class="service-img" alt="자연"/>
+                <h3>실사급 자연 환경 제작</h3>
+            </div>
+            <p>언리얼 엔진을 활용해 게임 및 영상용 실감 나는 자연 환경을 설계합니다.</p>
+        </div>
+        <div class="service-card reverse">
+            <div class="service-image-text">
+                <img src="assets/icons/architecture.jpg" class="service-img" alt="건축"/>
+                <h3>건축 시각화</h3>
+            </div>
+            <p>건축 도면을 바탕으로 고퀄리티 3D 시각화를 제작하여 클라이언트의 이해도를 높입니다.</p>
+        </div>
+        <div class="service-card">
+            <div class="service-image-text">
+                <img src="assets/icons/exhibition.jpg" class="service-img" alt="전시"/>
+                <h3>전시 및 체험 콘텐츠</h3>
+            </div>
+            <p>박람회, 홍보관 등에서 사용할 몰입형 콘텐츠를 기획 및 제작합니다.</p>
+        </div>
+        <div class="service-card reverse">
+            <div class="service-image-text">
+                <img src="assets/icons/gameworld.jpg" class="service-img" alt="게임"/>
+                <h3>게임 배경 디자인</h3>
+            </div>
+            <p>게임 세계관에 맞춘 창의적이고 디테일한 배경 환경을 구성합니다.</p>
+        </div>
+        <div class="service-card">
+            <div class="service-image-text">
+                <img src="assets/icons/studio.jpg" class="service-img" alt="영상"/>
+                <h3>영상 콘텐츠용 배경</h3>
+            </div>
+            <p>CF, 영화, 뮤직비디오 등을 위한 리얼한 3D 배경 세트를 제공합니다.</p>
+        </div>
+    </div>
+</section>
+
+<section class="flat-section fade-in" id="team">
+    <div class="container">
+        <h2>팀 소개</h2>
+        <div class="team-grid">
+            <!-- 팀원 1 -->
+            <div class="team-member">
+                <div class="team-card">
+                    <div class="card-face front">
+                        <img src="assets/team/technical.jpg" alt="테크니컬 아티스트" class="team-photo" />
+                        <h3>테크니컬 아티스트</h3>
+                    </div>
+                    <div class="card-face back">
+                        <h4>주요 스킬</h4>
+                        <p><strong>Unreal Engine</strong>, <strong>Blender</strong></p>
+                        <h4>대표 이력</h4>
+                        <p>버추얼 프로덕션 영화·드라마 제작 다수 참여</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 팀원 2 -->
+            <div class="team-member">
+                <div class="team-card">
+                    <div class="card-face front">
+                        <img src="assets/team/generalist.jpg" alt="3D 제너럴리스트" class="team-photo" />
+                        <h3>3D 제너럴리스트</h3>
+                    </div>
+                    <div class="card-face back">
+                        <h4>주요 스킬</h4>
+                        <p><strong>Maya</strong>, <strong>Substance Painter</strong>, <strong>Photoshop</strong>, <strong>Illustrator</strong></p>
+                        <h4>대표 이력</h4>
+                        <p>영화·드라마 3D 어셋 다수 제작</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section class="flat-section fade-in" id="contact">
+    <div class="container">
+        <h2>의뢰 문의</h2>
+        <form id="contactForm" action="https://formspree.io/f/mjkyezvd" method="POST">
+            <label for="name">이름</label>
+            <input type="text" id="name" name="name" required />
+
+            <label for="email">이메일</label>
+            <input type="email" id="email" name="email" required />
+
+            <label for="budget">예산</label>
+            <input type="text" id="budget" name="budget" />
+
+            <label for="deadline">마감일</label>
+            <input type="date" id="deadline" name="deadline" />
+
+            <label for="message">요청사항</label>
+            <textarea id="message" name="message" rows="5"></textarea>
+
+            <button type="submit">의뢰하기</button>
+        </form>
+    </div>
+</section>
+
+
+<footer>
+    <p>© 2025 SSample. All rights reserved.</p>
+    <p>문의: <a href="mailto:ssample3d@gmail.com">ssample3d@gmail.com</a></p>
+</footer>
+
+<script src="main.js"></script>
+<script>
+    function toggleMute() {
+      const video = document.getElementById("aboutVideo");
+      video.muted = !video.muted;
+    }
+    function togglePlay() {
+      const video = document.getElementById("aboutVideo");
+      if (video.paused) {
+        video.play();
+      } else {
+        video.pause();
+      }
+    }
+    document.getElementById("contactForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      alert("의뢰 내용이 성공적으로 접수되었습니다. 실제 메일 서버는 아직 연결되어 있지 않습니다.");
+    });
+</script>
+</body>
+</html>

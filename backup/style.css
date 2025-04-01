@@ -260,11 +260,10 @@ header {
   margin-bottom: 10px;
 }
 .service-card p {
-  text-align: center;
-  font-size: 1.1em;
-  line-height: 1.6;
-  color: #333;
+  flex: 2;
+  text-align: left;
 }
+
 
 
 /* Contact */
@@ -325,7 +324,7 @@ body.fade-page.loaded {
 }
 
 .team-card {
-  width: 350px;
+  width: 320px;
   height: 380px;
   position: relative;
   transition: transform 0.8s;
@@ -360,9 +359,6 @@ body.fade-page.loaded {
 .card-face h3, .card-face h4 {
   margin-bottom: 10px;
   color: #222;
-}
-.card-face.front h3 {
-  color: #0055ff; /* 진한 파란색 */
 }
 
 .card-face p {
