@@ -155,21 +155,27 @@
 <section class="flat-section fade-in" id="contact">
     <div class="container">
         <h2>의뢰 문의</h2>
-        <form id="contactForm">
+        <form id="contactForm" action="https://formspree.io/f/mjkyezvd" method="POST">
             <label for="name">이름</label>
-            <input type="text" id="name" name="name" required/>
+            <input type="text" id="name" name="name" required />
+
             <label for="email">이메일</label>
-            <input type="email" id="email" name="email" required/>
+            <input type="email" id="email" name="email" required />
+
             <label for="budget">예산</label>
-            <input type="text" id="budget" name="budget"/>
+            <input type="text" id="budget" name="budget" />
+
             <label for="deadline">마감일</label>
-            <input type="date" id="deadline" name="deadline"/>
+            <input type="date" id="deadline" name="deadline" />
+
             <label for="message">요청사항</label>
             <textarea id="message" name="message" rows="5"></textarea>
+
             <button type="submit">의뢰하기</button>
         </form>
     </div>
 </section>
+
 
 <footer>
     <p>© 2025 SSample. All rights reserved.</p>

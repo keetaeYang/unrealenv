@@ -36,6 +36,13 @@ header {
   align-items: center;
   gap: 10px;
 }
+/* 로고 이미지 크기 제어 */
+.logo-flex img {
+  height: 36px;
+  width: auto;
+  max-width: 160px;
+}
+
 .logo-text {
   font-weight: bold;
   font-size: 1.2em;
