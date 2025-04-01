@@ -50,7 +50,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1em 2em;
+  padding: 0.5em 2em;
 }
 .logo-flex {
   display: flex;
@@ -437,4 +437,24 @@ body.fade-page.loaded {
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 15px;
+}
+#contactForm label {
+  display: block;
+  text-align: left;
+  font-weight: bold;
+  margin: 15px 0 5px;
+}
+
+#contactForm input,
+#contactForm textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  text-align: left; /* 🔥 입력 내용도 왼쪽 정렬 */
+  font-size: 1em;
+}
+#contactForm button {
+  margin-top: 20px;
+  font-weight: bold;
 }
