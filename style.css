@@ -271,4 +271,7 @@ header {
   .portfolio-item {
     width: 100%;
   }
+  .logo-flex img {
+    height: 28px !important;
+  }
 }
