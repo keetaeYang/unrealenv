@@ -230,6 +230,7 @@ header {
   margin-bottom: 30px;
   box-shadow: 0 5px 10px rgba(0,0,0,0.05);
   gap: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .service-card.reverse {
   flex-direction: row-reverse;
