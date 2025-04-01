@@ -7,8 +7,6 @@ body {
   font-family: 'Pretendard', 'Noto Sans KR', sans-serif;
   background-color: #f8f9fa;
   color: #222;
-  font-size: 18px;
-  padding-top: 70px; /* 헤더 높이만큼 띄우기 */
 }
 a {
   text-decoration: none;
@@ -17,30 +15,15 @@ a {
 h2 {
   margin-bottom: 30px;
 }
-h3 {
-  font-size: 24px;
-  font-weight: 600;
-}
-
-h4 {
-  font-size: 18px;
-  font-weight: bold;
-  margin-top: 20px;
-}
 
 /* 헤더 */
 header {
+  background: #000;
+  color: white;
   position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
   z-index: 1000;
-  background: #000 !important;
-  color: white;
-  font-size: 30px;
-  font-weight: 800;
-  letter-spacing: -0.5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
 .relative {
   position: relative;
@@ -50,7 +33,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.5em 2em;
+  padding: 1em 2em;
 }
 .logo-flex {
   display: flex;
@@ -66,7 +49,7 @@ header {
 }
 .logo-text {
   font-weight: bold;
-  font-size: 0.8em;
+  font-size: 1.2em;
 }
 .desktop-nav ul {
   list-style: none;
@@ -79,10 +62,9 @@ header {
   color: white;
   background: none;
   border: none;
-  font-size: 0.7em;     /* ✨ 작고 미니멀 */
+  font-size: 1em;
   cursor: pointer;
-  padding: 0;
-  margin: 0 10px;
+  padding-bottom: 4px;
   transition: all 0.3s ease;
   border-bottom: 2px solid transparent;
 }
@@ -117,7 +99,7 @@ header {
   color: white;
   display: block;
   padding: 10px 0;
-  font-size: 0.7em;
+  font-size: 1.2em;
 }
 
 /* Hero */
@@ -154,9 +136,8 @@ header {
   background: #fff;
 }
 .container {
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
   text-align: center;
 }
 
@@ -291,7 +272,7 @@ header {
   flex-wrap: wrap;
 }
 .team-member {
-  max-width: 1 1 360px;
+  max-width: 250px;
   text-align: center;
 }
 .team-photo {
@@ -341,28 +322,6 @@ header {
   .logo-flex img {
     height: 28px !important;
   }
-  body {
-    font-size: 18px;
-  }
-
-  h2 {
-    font-size: 42px;
-    font-weight: 800;
-    margin-bottom: 40px;
-    color: #111;
-    letter-spacing: -0.5px;
-  }
-
-  h3 {
-    font-size: 24px;
-    font-weight: 600;
-  }
-
-  h4 {
-    font-size: 18px;
-    font-weight: bold;
-    margin-top: 20px;
-  }
 }
 
 /* 페이지 로딩 애니메이션 */
@@ -387,8 +346,8 @@ body.fade-page.loaded {
 }
 
 .team-card {
-  width: 360px;
-  height: 420px;
+  width: 260px;
+  height: 360px;
   position: relative;
   transition: transform 0.8s;
   transform-style: preserve-3d;
@@ -432,29 +391,9 @@ body.fade-page.loaded {
 }
 
 .team-photo {
-  width: 130px;
-  height: 130px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 15px;
-}
-#contactForm label {
-  display: block;
-  text-align: left;
-  font-weight: bold;
-  margin: 15px 0 5px;
-}
-
-#contactForm input,
-#contactForm textarea {
-  width: 100%;
-  padding: 12px;
-  border-radius: 8px;
-  border: 1px solid #ddd;
-  text-align: left; /* 🔥 입력 내용도 왼쪽 정렬 */
-  font-size: 1em;
-}
-#contactForm button {
-  margin-top: 20px;
-  font-weight: bold;
 }
