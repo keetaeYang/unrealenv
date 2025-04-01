@@ -7,6 +7,7 @@ body {
   font-family: 'Pretendard', 'Noto Sans KR', sans-serif;
   background-color: #f8f9fa;
   color: #222;
+  font-size: 18px
 }
 a {
   text-decoration: none;
@@ -15,11 +16,25 @@ a {
 h2 {
   margin-bottom: 30px;
 }
+h3 {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+h4 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 20px;
+}
 
 /* 헤더 */
 header {
+  font-size: 42px
+  font-weight: 800;
+  margin-bottom: 40px
   background: #000;
-  color: white;
+  color: #111;
+  letter-spacing: -0.5px
   position: fixed;
   width: 100%;
   z-index: 1000;
@@ -346,8 +361,8 @@ body.fade-page.loaded {
 }
 
 .team-card {
-  width: 260px;
-  height: 360px;
+  width: 360px;
+  height: 420px;
   position: relative;
   transition: transform 0.8s;
   transform-style: preserve-3d;
@@ -391,8 +406,8 @@ body.fade-page.loaded {
 }
 
 .team-photo {
-  width: 120px;
-  height: 120px;
+  width: 130px;
+  height: 130px;
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 15px;
