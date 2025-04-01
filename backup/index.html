@@ -3,14 +3,33 @@
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <!-- 기본 파비콘 -->
+    <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon" />
+    
     <title>SSample - Unreal Environment Studio</title>
     <link rel="stylesheet" href="style.css"/>
+
+    <!-- ✅ SEO 메타 태그 -->
+    <meta name="description" content="Unreal Engine 기반의 실사급 자연 및 건축 환경 제작 스튜디오, 게임, 영상, 전시용 고퀄리티 3D 배경 구현">
+    <meta name="keywords" content="Unreal Engine, 언리얼 엔진, 환경 제작, 실사급 배경, 3D 배경, 건축 시각화, 버추얼 프로덕션">
+    <meta name="author" content="SSample Studio">
+    <meta property="og:title" content="SSample - Unreal Environment Studio">
+    <meta property="og:description" content="실사급 자연·건축 환경을 언리얼 엔진으로 구현하는 스튜디오">
+    <meta property="og:image" content="/assets/images/forest_hero.jpg">
+    <meta property="og:type" content="website">
+    <meta name="robots" content="index, follow">
+    <!-- Google Search Console -->
+    <!-- Naver Search Advisor -->
+    <meta name="naver-site-verification" content="d602d5a7f00bd4530d2eeb922e136d0577ad7e7e" />
+
 </head>
 <body class="fade-page">
+
 <header>
     <div class="nav">
         <a class="logo logo-flex" href="#hero">
-            <img src="/assets/images/logo.png" alt="SSample 로고"/>
+            <img src="/assets/images/logo.png" alt="SSample 로고" loading="lazy"/>
             <span class="logo-text">SSample</span>
         </a>
         <nav class="desktop-nav">
@@ -54,7 +73,7 @@
             </p>
         </div>
         <div class="about-image relative">
-            <video muted autoplay class="about-video" id="aboutVideo" loop playsinline>
+            <video muted autoplay class="about-video" id="aboutVideo" loop playsinline poster="/assets/images/about_placeholder.jpg">
                 <source src="/assets/videos/about_video.mp4" type="video/mp4" />
             </video>
             <div class="video-controls">
@@ -64,22 +83,20 @@
         </div>
     </div>
 </section>
-
-
 <section class="flat-section fade-in" id="portfolio">
     <div class="container">
         <h2>포트폴리오</h2>
         <div class="portfolio-grid">
             <div class="portfolio-item">
-                <img src="/assets/images/portfolio_city.jpg" alt="도시 야경"/>
+                <img src="/assets/images/portfolio_city.jpg" alt="도시 야경 이미지" loading="lazy" />
                 <div class="caption-overlay">도시 야경</div>
             </div>
             <div class="portfolio-item">
-                <img src="/assets/images/portfolio_stage.jpg" alt="아이돌 무대"/>
+                <img src="/assets/images/portfolio_stage.jpg" alt="아이돌 무대 이미지" loading="lazy" />
                 <div class="caption-overlay">아이돌 무대</div>
             </div>
             <div class="portfolio-item">
-                <img src="/assets/images/portfolio_cafe.jpg" alt="감성 공간"/>
+                <img src="/assets/images/portfolio_cafe.jpg" alt="감성 공간 이미지" loading="lazy" />
                 <div class="caption-overlay">감성 공간</div>
             </div>
         </div>
@@ -89,54 +106,58 @@
 <section class="flat-section fade-in" id="services">
     <div class="container">
         <h2>서비스</h2>
+
         <div class="service-card">
             <div class="service-image-text">
-                <img src="/assets/images/nature.jpg" class="service-img" alt="자연"/>
+                <img src="/assets/images/nature.jpg" class="service-img" alt="실사급 자연 환경 이미지" loading="lazy" />
                 <h3>실사급 자연 환경 제작</h3>
             </div>
             <div class="service-desc">
-              <p>언리얼 엔진을 활용해 게임 및 영상용 실감 나는 자연 환경을 설계합니다.</p>
+                <p>언리얼 엔진을 활용해 게임 및 영상용 실감 나는 자연 환경을 설계합니다.</p>
             </div>
         </div>
+
         <div class="service-card reverse">
             <div class="service-image-text">
-                <img src="/assets/images/architecture.jpg" class="service-img" alt="건축"/>
+                <img src="/assets/images/architecture.jpg" class="service-img" alt="건축 시각화 이미지" loading="lazy" />
                 <h3>건축 시각화</h3>
             </div>
             <div class="service-desc">
-              <p>건축 도면을 바탕으로 고퀄리티 3D 시각화를 제작하여 클라이언트의 이해도를 높입니다.</p>
+                <p>건축 도면을 바탕으로 고퀄리티 3D 시각화를 제작하여 클라이언트의 이해도를 높입니다.</p>
             </div>
         </div>
+
         <div class="service-card">
             <div class="service-image-text">
-                <img src="/assets/images/exhibition.jpg" class="service-img" alt="전시"/>
+                <img src="/assets/images/exhibition.jpg" class="service-img" alt="전시 콘텐츠 이미지" loading="lazy" />
                 <h3>전시 및 체험 콘텐츠</h3>
             </div>
             <div class="service-desc">
-              <p>박람회, 홍보관 등에서 사용할 몰입형 콘텐츠를 기획 및 제작합니다.</p>
+                <p>박람회, 홍보관 등에서 사용할 몰입형 콘텐츠를 기획 및 제작합니다.</p>
             </div>
         </div>
+
         <div class="service-card reverse">
             <div class="service-image-text">
-                <img src="/assets/images/gameworld.jpg" class="service-img" alt="게임"/>
+                <img src="/assets/images/gameworld.jpg" class="service-img" alt="게임 배경 이미지" loading="lazy" />
                 <h3>게임 배경 디자인</h3>
             </div>
             <div class="service-desc">
-              <p>게임 세계관에 맞춘 창의적이고 디테일한 배경 환경을 구성합니다.</p>
+                <p>게임 세계관에 맞춘 창의적이고 디테일한 배경 환경을 구성합니다.</p>
             </div>
         </div>
+
         <div class="service-card">
             <div class="service-image-text">
-                <img src="/assets/images/studio.jpg" class="service-img" alt="영상"/>
+                <img src="/assets/images/studio.jpg" class="service-img" alt="영상 콘텐츠용 배경 이미지" loading="lazy" />
                 <h3>영상 콘텐츠용 배경</h3>
             </div>
             <div class="service-desc">
-              <p>CF, 영화, 뮤직비디오 등을 위한 리얼한 3D 배경 세트를 제공합니다.</p>
+                <p>CF, 영화, 뮤직비디오 등을 위한 리얼한 3D 배경 세트를 제공합니다.</p>
             </div>
         </div>
     </div>
 </section>
-
 <section class="flat-section fade-in" id="team">
     <div class="container">
         <h2>팀 소개</h2>
@@ -145,7 +166,7 @@
             <div class="team-member">
                 <div class="team-card">
                     <div class="card-face front">
-                        <img src="/assets/images/technical.jpg" alt="테크니컬 아티스트" class="team-photo" />
+                        <img src="/assets/images/technical.jpg" alt="테크니컬 아티스트 프로필 이미지" class="team-photo" loading="lazy" />
                         <h3>테크니컬 아티스트</h3>
                     </div>
                     <div class="card-face back">
@@ -161,7 +182,7 @@
             <div class="team-member">
                 <div class="team-card">
                     <div class="card-face front">
-                        <img src="/assets/images/generalist.jpg" alt="3D 제너럴리스트" class="team-photo" />
+                        <img src="/assets/images/generalist.jpg" alt="3D 제너럴리스트 프로필 이미지" class="team-photo" loading="lazy" />
                         <h3>3D 제너럴리스트</h3>
                     </div>
                     <div class="card-face back">
@@ -175,8 +196,6 @@
         </div>
     </div>
 </section>
-
-
 
 <section class="flat-section fade-in" id="contact">
     <div class="container">
@@ -202,7 +221,6 @@
     </div>
 </section>
 
-
 <footer>
     <p>© 2025 SSample. All rights reserved.</p>
     <p>문의: <a href="mailto:ssample3d@gmail.com">ssample3d@gmail.com</a></p>
@@ -214,24 +232,31 @@
       const video = document.getElementById("aboutVideo");
       video.muted = !video.muted;
     }
+
     function togglePlay() {
       const video = document.getElementById("aboutVideo");
-      if (video.paused) {
-        video.play();
-      } else {
-        video.pause();
-      }
+      video.paused ? video.play() : video.pause();
     }
-    document.getElementById("contactForm").addEventListener("submit", function(e) {
-  const form = document.getElementById("contactForm");
-  if (form) {
-    form.addEventListener("submit", function () {
-      // 성공 후 메시지만 보여주고, 전송은 막지 않음
+
+    // 부드러운 스크롤
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute("href"));
+        if (target) {
+          target.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+          });
+        }
+      });
+    });
+
+    // 폼 알림 메시지
+    document.getElementById("contactForm").addEventListener("submit", function () {
       setTimeout(() => {
         alert("의뢰 내용이 성공적으로 접수되었습니다. 감사합니다!");
       }, 500);
-    });
-  }
     });
 </script>
 </body>
