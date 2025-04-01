@@ -64,6 +64,13 @@ header {
   border: none;
   font-size: 1em;
   cursor: pointer;
+  padding-bottom: 4px;
+  transition: all 0.3s ease;
+  border-bottom: 2px solid transparent;
+}
+.desktop-nav a:hover {
+  font-weight: bold;
+  border-bottom: 2px solid #38B6FF;
 }
 
 /* 모바일 메뉴 */
