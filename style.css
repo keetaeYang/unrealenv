@@ -167,6 +167,9 @@ header {
 }
 
 /* About */
+.about-text h2 {
+  color: #38B6FF; /* 브랜드 컬러 */
+}
 .about-flex {
   display: flex;
   flex-wrap: wrap;
@@ -176,7 +179,10 @@ header {
 }
 .about-text {
   flex: 1 1 50%;
-  text-align: left;
+  text-align: center;
+  font-size: 1.3em;     /* 기본보다 약간 큼 */
+  line-height: 1.8;      /* 줄 간격 넉넉히 */
+  color: #444;           /* 부드러운 회색톤 */
 }
 .about-image {
   flex: 1 1 45%;
@@ -289,7 +295,7 @@ header {
   flex: 1;
   padding: 20px;
   text-align: center;
-  font-size: 1.1em;      /* 추가 */
+  font-size: 1.3em;      /* 추가 */
   line-height: 1.7;       /* 추가 */
   color: #333;            /* 필요하면 색도 조절 */
 }
