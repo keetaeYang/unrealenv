@@ -140,7 +140,7 @@
                     </div>
                     <div class="card-face back">
                         <h4>주요 스킬</h4>
-                        <p><strong>Unreal Engine</strong>, <strong>Blender</strong></p>
+                        <p><strong>Unreal Engine</strong>, <strong>Blender</strong>, <strong>Disguise</strong></p>
                         <h4>대표 이력</h4>
                         <p>버추얼 프로덕션 영화·드라마 제작 다수 참여</p>
                     </div>
@@ -213,8 +213,15 @@
       }
     }
     document.getElementById("contactForm").addEventListener("submit", function(e) {
-      e.preventDefault();
-      alert("의뢰 내용이 성공적으로 접수되었습니다. 실제 메일 서버는 아직 연결되어 있지 않습니다.");
+  const form = document.getElementById("contactForm");
+  if (form) {
+    form.addEventListener("submit", function () {
+      // 성공 후 메시지만 보여주고, 전송은 막지 않음
+      setTimeout(() => {
+        alert("의뢰 내용이 성공적으로 접수되었습니다. 감사합니다!");
+      }, 500);
+    });
+  }
     });
 </script>
 </body>
