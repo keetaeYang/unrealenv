@@ -553,3 +553,9 @@ body.post main {
     padding-left: 20px; /* 원하는 여백 값으로 조정 */
     padding-right: 20px; /* 좌우 여백을 균형있게 주려면 추가 */
 }
+/* 포스트 페이지 전용 컨테이너 여백 */
+.post-container {
+  padding-left: 20px;  /* 필요에 따라 값을 조정 */
+  padding-right: 20px; /* 좌우 여백을 균형있게 적용 */
+}
+

@@ -5,19 +5,19 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ page.title }} | {{ site.title }}</title>
-  <!-- SEO 메타 태그: 개별 포스트에 설정된 description, keywords 사용 -->
   <meta name="description" content="{{ page.description | default: site.description }}">
   <meta name="keywords" content="{{ page.keywords | default: site.keywords }}">
   <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
 </head>
 <body>
-  {% include header.html %}
-  <main>
+{% include header.html %}
+<main>
+  <div class="container post-container">
     <article>
       <h1>{{ page.title }}</h1>
       <p class="post-meta">{{ page.date | date: "%Y-%m-%d" }}</p>
       {{ content }}
-      
+
       <!-- AdSense 광고 영역 (승인 후 실제 값으로 교체) -->
       <div class="adsense-container" style="margin: 40px 0;">
         <ins class="adsbygoogle"
@@ -27,14 +27,13 @@
              data-ad-format="auto"
              data-full-width-responsive="true"></ins>
         <script>
-             (adsbygoogle = window.adsbygoogle || []).push({});
+          (adsbygoogle = window.adsbygoogle || []).push({});
         </script>
       </div>
-      <!-- // 광고 영역 끝 -->
-      
     </article>
-  </main>
-  {% include footer.html %}
-  <script src="{{ "/assets/js/main.js" | relative_url }}"></script>
+  </div>
+</main>
+{% include footer.html %}
+<script src="{{ "/assets/js/main.js" | relative_url }}"></script>
 </body>
 </html>
