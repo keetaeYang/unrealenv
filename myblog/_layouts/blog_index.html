@@ -9,40 +9,42 @@
   <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
 </head>
 <body>
-  {% include header.html %}
-  <main>
-    <section id="blog">
-      <div class="container">
-        <h1>블로그 포스트</h1>
-        <div class="post-list">
-          {% for post in paginator.posts %}
-            <article class="post-item">
-              <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
-              <p class="post-meta">{{ post.date | date: "%Y-%m-%d" }}</p>
-              <p>{{ post.excerpt | strip_html | truncate: 150 }}</p>
-              <a class="btn" href="{{ post.url | relative_url }}">더 읽기</a>
-            </article>
-          {% endfor %}
-        </div>
-        <div class="pagination">
-          {% if paginator.previous_page %}
-            <a class="prev" href="{{ paginator.previous_page_path | relative_url }}">&larr; 이전</a>
-          {% endif %}
-          {% for page in (1..paginator.total_pages) %}
-            {% if page == paginator.page %}
-              <span class="page current">{{ page }}</span>
-            {% else %}
-              <a class="page" href="{{ paginator.paginate_path | replace: ':num', page }}">{{ page }}</a>
-            {% endif %}
-          {% endfor %}
-          {% if paginator.next_page %}
-            <a class="next" href="{{ paginator.next_page_path | relative_url }}">다음 &rarr;</a>
-          {% endif %}
-        </div>
+{% include header.html %}
+<main>
+  <section id="blog">
+    <div class="container">
+      <h1>블로그 포스트</h1>
+      <div class="post-list grid-layout">
+        {% for post in paginator.posts %}
+        <article class="post-item card">
+          <div class="card-content">
+            <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+            <p class="post-meta">{{ post.date | date: "%Y-%m-%d" }}</p>
+            <p>{{ post.excerpt | strip_html | truncate: 150 }}</p>
+            <a class="btn" href="{{ post.url | relative_url }}">더 읽기</a>
+          </div>
+        </article>
+        {% endfor %}
       </div>
-    </section>
-  </main>
-  {% include footer.html %}
-  <script src="{{ "/assets/js/main.js" | relative_url }}"></script>
+      <div class="pagination">
+        {% if paginator.previous_page %}
+        <a class="prev" href="{{ paginator.previous_page_path | relative_url }}">&larr; 이전</a>
+        {% endif %}
+        {% for page in (1..paginator.total_pages) %}
+        {% if page == paginator.page %}
+        <span class="page current">{{ page }}</span>
+        {% else %}
+        <a class="page" href="{{ paginator.paginate_path | replace: ':num', page }}">{{ page }}</a>
+        {% endif %}
+        {% endfor %}
+        {% if paginator.next_page %}
+        <a class="next" href="{{ paginator.next_page_path | relative_url }}">다음 &rarr;</a>
+        {% endif %}
+      </div>
+    </div>
+  </section>
+</main>
+{% include footer.html %}
+<script src="{{ "/assets/js/main.js" | relative_url }}"></script>
 </body>
 </html>
