@@ -168,7 +168,7 @@ header {
 
 /* 섹션 공통 */
 .flat-section {
-  padding: 80px 20px;
+  padding: 40px 20px;
   background: #fff;
 }
 .container {
@@ -456,7 +456,6 @@ footer {
   font-size: 0.9em;
   background-color: #f0f0f0;
   color: #333;
-  margin-top: 40px;  /* 풋터의 상단 여백을 추가 */
 }
 footer a {
   color: var(--primary-color);
