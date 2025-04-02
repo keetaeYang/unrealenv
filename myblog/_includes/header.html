@@ -1,0 +1,29 @@
+<header>
+  <div class="nav">
+    <a class="logo logo-flex" href="{{ "/" | relative_url }}">
+      <img src="/assets/images/logo.png" alt="SSample 로고" loading="lazy" />
+      <span class="logo-text">SSample</span>
+    </a>
+    <nav class="desktop-nav">
+      <ul>
+        <li><a href="{{ "/#about" | relative_url }}">About</a></li>
+        <li><a href="{{ "/#portfolio" | relative_url }}">Portfolio</a></li>
+        <li><a href="{{ "/#services" | relative_url }}">Services</a></li>
+        <li><a href="{{ "/#team" | relative_url }}">Team</a></li>
+        <li><a href="{{ "/blog/" | relative_url }}">블로그</a></li>
+        <li><a href="{{ "/#contact" | relative_url }}">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="hamburger" onclick="toggleMenu()" aria-label="모바일 메뉴 열기" aria-expanded="false">☰</button>
+    <div id="mobileNav" class="mobile-nav" aria-hidden="true">
+      <ul>
+        <li><a href="{{ "/#about" | relative_url }}">About</a></li>
+        <li><a href="{{ "/#portfolio" | relative_url }}">Portfolio</a></li>
+        <li><a href="{{ "/#services" | relative_url }}">Services</a></li>
+        <li><a href="{{ "/#team" | relative_url }}">Team</a></li>
+        <li><a href="{{ "/blog/" | relative_url }}">블로그</a></li>
+        <li><a href="{{ "/#contact" | relative_url }}">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</header>
