@@ -25,9 +25,8 @@ title: "SSample - Unreal Environment Studio"
             </p>
         </div>
         <div class="about-image relative">
-            <video muted autoplay loop playsinline class="about-video" id="aboutVideo" poster="/assets/images/about_placeholder.jpg" aria-label="회사 소개 비디오">
+            <video muted autoplay loop playsinline class="about-video" id="aboutVideo" aria-label="회사 소개 비디오">
                 <source src="/assets/videos/about_video.mp4" type="video/mp4" />
-                <!-- 필요 시 자막 또는 설명 트랙 추가 -->
             </video>
             <div class="video-controls">
                 <button onclick="toggleMute()">🔇/🔊</button>
@@ -161,43 +160,46 @@ title: "SSample - Unreal Environment Studio"
 <section id="blog-summary" class="flat-section fade-in">
     <div class="container">
         <h2>최신 블로그 포스트</h2>
-        <div class="post-list">
+        <div class="post-list grid-layout">
             {% assign recent_posts = site.posts | slice: 0, 3 %}
             {% for post in recent_posts %}
-            <article class="post-item">
-                <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-                <p class="post-meta">{{ post.date | date: "%Y-%m-%d" }}</p>
-                <p>{{ post.excerpt | strip_html | truncate: 150 }}</p>
-                <a class="btn" href="{{ post.url | relative_url }}">더 읽기</a>
+            <article class="post-item card">
+                <div class="card-content">
+                    <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+                    <p class="post-meta">{{ post.date | date: "%Y-%m-%d" }}</p>
+                    <p>{{ post.excerpt | strip_html | truncate: 150 }}</p>
+                    <a class="btn" href="{{ post.url | relative_url }}">더 읽기</a>
+                </div>
             </article>
             {% endfor %}
         </div>
-        <a class="btn" href="{{ "/blog/" | relative_url }}">더 많은 포스트 보기</a>
+        <a class="btn more-posts" href="{{ "/blog/" | relative_url }}">더 많은 포스트 보기</a>
     </div>
 </section>
 
 <section class="flat-section fade-in" id="contact">
-    <div class="container">
-        <h2>의뢰 문의</h2>
-        <form id="contactForm" action="https://formspree.io/f/mjkyezvd" method="POST">
-            <label for="name">이름</label>
-            <input type="text" id="name" name="name" required />
+        <div class="container">
+            <h2>의뢰 문의</h2>
+            <form id="contactForm" action="https://formspree.io/f/mjkyezvd" method="POST">
+                <label for="name">이름</label>
+                <input type="text" id="name" name="name" required />
 
-            <label for="email">이메일</label>
-            <input type="email" id="email" name="email" required />
+                <label for="email">이메일</label>
+                <input type="email" id="email" name="email" required />
 
-            <label for="budget">예산</label>
-            <input type="text" id="budget" name="budget" />
+                <label for="budget">예산</label>
+                <input type="text" id="budget" name="budget" />
 
-            <label for="deadline">마감일</label>
-            <input type="date" id="deadline" name="deadline" />
+                <label for="deadline">마감일</label>
+                <input type="date" id="deadline" name="deadline" />
 
-            <label for="message">요청사항</label>
-            <textarea id="message" name="message" rows="5"></textarea>
+                <label for="message">요청사항</label>
+                <textarea id="message" name="message" rows="5"></textarea>
 
-            <button type="submit">의뢰하기</button>
-        </form>
-    </div>
-</section>
+                <button type="submit">의뢰하기</button>
+            </form>
+        </div>
+    </section>
+
 </main>
 
