@@ -630,3 +630,7 @@ body.post main {
     padding-top: 20px; /* 작은 화면에서는 여백을 더 줄임 */
   }
 }
+
+html {
+  scroll-behavior: smooth;
+}
