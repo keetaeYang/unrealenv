@@ -560,4 +560,12 @@ body.post main {
   text-align: left;  /* 텍스트를 왼쪽 정렬 */
 
 }
+/* 포스트 페이지에서만 적용 */
+body.post header {
+  position: relative;  /* 고정 헤더를 해제하여 콘텐츠가 잘리지 않게 함 */
+}
+
+body.post main {
+  padding-top: 120px;  /* 헤더 높이에 맞게 여백 추가 */
+}
 
