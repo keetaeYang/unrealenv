@@ -13,7 +13,7 @@
     {% include header.html %}
     <main>
         <section id="blog">
-            <div class="container">
+            <div class="container blog-container">
                 <h1>블로그 포스트</h1>
                 <div class="post-list grid-layout">
                     {% for post in paginator.posts %}
@@ -45,6 +45,7 @@
             </div>
         </section>
     </main>
+
     {% include footer.html %}
     <script src="{{ "/assets/js/main.js" | relative_url }}"></script>
 </body>

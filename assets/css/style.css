@@ -548,3 +548,8 @@ body.post main {
         transform: scale(1.05);
         box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
     }
+/* blog 페이지에만 적용할 여백 */
+.blog-container {
+    padding-left: 20px; /* 원하는 여백 값으로 조정 */
+    padding-right: 20px; /* 좌우 여백을 균형있게 주려면 추가 */
+}
