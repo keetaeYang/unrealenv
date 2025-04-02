@@ -557,5 +557,7 @@ body.post main {
 .post-container {
   padding-left: 20px;  /* 필요에 따라 값을 조정 */
   padding-right: 20px; /* 좌우 여백을 균형있게 적용 */
+  text-align: left;  /* 텍스트를 왼쪽 정렬 */
+
 }
 
