@@ -201,6 +201,7 @@ header {
 .flat-section {
   padding: 40px 20px;
   background: #fff;
+  scroll-margin-top: 50px;
 }
 .container {
   max-width: 1200px;
