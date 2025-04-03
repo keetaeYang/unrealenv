@@ -515,6 +515,7 @@ footer a:hover {
 
 }
 
+}
 .post-item.card {
   background: #fff;
   border: 1px solid #ddd;
@@ -583,11 +584,16 @@ footer a:hover {
   gap: 20px;
 }
 .card {
-  width: 300px;
-  background: #f8f8f8;
-  padding: 20px;
-  text-align: left; /* 핵심: 텍스트는 왼쪽 정렬 유지 */
+  background: #fff;
+  border: 1px solid #ddd;
   border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  width: 270px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
 }
 .blog-container h1 {
     text-align: center;
@@ -613,7 +619,7 @@ body.post main {
 /* 포스트 페이지 전용 링크 스타일 복원 */
 body.post article a {
   color: var(--link-color); /* 혹은 원하는 색상 */
-  text-decoration: underline;
+  text-decoration: none;
   pointer-events: auto;
 }
 
