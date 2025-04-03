@@ -4,21 +4,57 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{{ page.title }} | {{ site.title }}</title>
-  <meta name="description" content="{{ page.description | default: site.description }}">
-  <meta name="keywords" content="{{ page.keywords | default: site.keywords }}">
+
+  <meta name="description" content="{{ page.description | default: 'Unreal Engine 배경 제작' }}">
+  <meta property="og:title" content="{{ page.title | default: site.title }}">
+  <meta property="og:description" content="{{ page.description | default: '언리얼 엔진으로 만든 실사급 배경과 튜토리얼 소개' }}">
+  <meta property="og:image" content="{{ page.og_image | default: '/assets/images/og-image.jpg' }}">
+
   <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
 </head>
 <body class="fade-page post">
-  {% include header.html %}
-  <main>
-    <section id="blog">
-      <div class="container blog-container">
-        <h1>블로그 포스트</h1>
-        {{ content }}  <!-- 포스트 목록은 여기서 blog/index.md에서 불러옴 -->
+{% include header.html %}
+
+<main>
+  <section id="blog">
+    <div class="container blog-container">
+      <h1>{{ page.title }}</h1>
+
+      <div class="card-wrapper">
+        {% for post in paginator.posts %}
+        <article class="post-item card">
+          <div class="post-container">
+            <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+            <p class="post-meta">{{ post.date | date: "%Y-%m-%d" }}</p>
+            <p>{{ post.excerpt | strip_html | truncate: 150 }}</p>
+            <a class="btn" href="{{ post.url | relative_url }}">더 읽기</a>
+          </div>
+        </article>
+        {% endfor %}
       </div>
-    </section>
-  </main>
-  {% include footer.html %}
-  <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+
+      <div class="pagination">
+        {% if paginator.previous_page %}
+        <a class="prev" href="{{ paginator.previous_page_path | relative_url }}">이전</a>
+        {% endif %}
+
+        {% for page in (1..paginator.total_pages) %}
+        {% if page == paginator.page %}
+        <span class="current">{{ page }}</span>
+        {% else %}
+        <a class="page" href="{{ site.baseurl }}/blog/page{{ page }}">{{ page }}</a>
+        {% endif %}
+        {% endfor %}
+
+        {% if paginator.next_page %}
+        <a class="next" href="{{ paginator.next_page_path | relative_url }}">다음</a>
+        {% endif %}
+      </div>
+    </div>
+  </section>
+</main>
+
+{% include footer.html %}
+<script src="{{ '/assets/js/main.js' | relative_url }}"></script>
 </body>
 </html>
