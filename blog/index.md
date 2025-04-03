@@ -6,9 +6,10 @@ pagination:
   enabled: true
   offset: 3
 ---
+<div class="card-wrapper">
 {% for post in paginator.posts %}
   <article class="post-item card">
-    <div class="card-content">
+    <div class="post-container">
       <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
       <p class="post-meta">{{ post.date | date: "%Y-%m-%d" }}</p>
       <p>{{ post.excerpt | strip_html | truncate: 150 }}</p>
@@ -16,6 +17,8 @@ pagination:
     </div>
   </article>
 {% endfor %}
+</div>
+
 
 <div class="pagination">
   {% if paginator.previous_page %}

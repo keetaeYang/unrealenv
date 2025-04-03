@@ -507,11 +507,12 @@ footer a:hover {
 }
 
 /* Blog Grid Layout (가로 배열, 카드형 디자인) */
-.post-list.grid-layout {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
+.post-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; /* 화면 너비에 따라 카드들이 줄바꿈되도록 */
+    gap: 1rem; /* 카드 간 간격 */
+
 }
 
 .post-item.card {
@@ -575,11 +576,29 @@ footer a:hover {
     padding-left: 20px; /* 원하는 여백 값으로 조정 */
     padding-right: 20px; /* 좌우 여백을 균형있게 주려면 추가 */
 }
+.card-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* 카드들만 가운데 정렬 */
+  gap: 20px;
+}
+.card {
+  width: 300px;
+  background: #f8f8f8;
+  padding: 20px;
+  text-align: left; /* 핵심: 텍스트는 왼쪽 정렬 유지 */
+  border-radius: 8px;
+}
+.blog-container h1 {
+    text-align: center;
+}
 /* 포스트 페이지 전용 컨테이너 여백 */
 .post-container {
   padding-left: 20px;  /* 필요에 따라 값을 조정 */
   padding-right: 20px; /* 좌우 여백을 균형있게 적용 */
-  text-align: left;  /* 텍스트를 왼쪽 정렬 */
+  text-align: left;
+
+
 
 }
 /* 포스트 페이지에서만 적용 */
