@@ -13,12 +13,12 @@
   <main>
     <section id="blog">
       <div class="container blog-container">
-        {{ content }}
+        <h1>블로그 포스트</h1>
+        {{ content }}  <!-- 포스트 목록은 여기서 blog/index.md에서 불러옴 -->
       </div>
     </section>
   </main>
   {% include footer.html %}
-  <script src="{{ "/assets/js/main.js" | relative_url }}"></script>
+  <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
 </body>
 </html>
-

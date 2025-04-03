@@ -1,20 +1,25 @@
 title: "SSample Studio Blog"
 description: "Unreal Engine 및 3D 시각화 관련 포스트와 팁을 제공합니다."
-baseurl: ""
-url: "https://unrealenv.com"
-
-# SEO 기본값
 keywords: "Unreal Engine, 팁, 최적화, 게임 개발, 3D 시각화"
 
-# 페이징 설정: 한 페이지당 5개의 포스트
-paginate: 3
-paginate_path: "/blog/page:num"
+baseurl: "" # 루트 도메인 사용
+url: "https://unrealenv.com"
+
+permalink: /:categories/:year/:month/:day/:title/
+
 plugins:
-  - jekyll-paginate
+  - jekyll-paginate-v2
+
+pagination:
+  enabled: true
+  per_page: 3
+  permalink: /blog/page/:num
+  title: ":title - page :num"
+  sort_field: "date"
+  sort_reverse: true
+  trail:
+    before: 2
+    after: 2
 
 markdown: kramdown
 theme: minima
-
-
-
-
