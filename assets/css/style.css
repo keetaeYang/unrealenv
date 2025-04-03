@@ -666,3 +666,43 @@ body.post main {
 html {
   scroll-behavior: smooth;
 }
+.scroll-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
+  width: 48px;
+  height: 48px;
+  background-color: #ffffffcc;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.scroll-to-top img {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.2s ease;
+}
+
+.scroll-to-top:hover img {
+  transform: translateY(-3px);
+}
+
+/* 활성화 시 보이기 */
+.scroll-to-top.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* 데스크탑에서는 숨기기 */
+@media (min-width: 769px) {
+  .scroll-to-top {
+    display: none;
+  }
+}
