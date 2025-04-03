@@ -25,7 +25,6 @@
         <article class="post-item card">
           <div class="post-container">
             <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
-            <p class="post-meta">{{ post.date | date: "%Y-%m-%d" }}</p>
             <p>{{ post.excerpt | strip_html | truncate: 150 }}</p>
             <a class="btn" href="{{ post.url | relative_url }}">더 읽기</a>
           </div>
