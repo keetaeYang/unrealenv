@@ -591,6 +591,17 @@ body.post main {
   padding-top: 0px;  /* 헤더 높이에 맞게 여백 추가 */
   padding-bottom: 40px;  /* 풋터와 본문 사이에 여백을 추가 */
 }
+/* 포스트 페이지 전용 링크 스타일 복원 */
+body.post article a {
+  color: var(--link-color); /* 혹은 원하는 색상 */
+  text-decoration: underline;
+  pointer-events: auto;
+}
+
+body.post article a:hover {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
 /* 커스텀 제목 스타일링 */
 .custom-title {
   font-family: 'Arial', sans-serif;  /* 글꼴 변경 */

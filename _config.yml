@@ -9,11 +9,12 @@ keywords: "Unreal Engine, 팁, 최적화, 게임 개발, 3D 시각화"
 # 페이징 설정: 한 페이지당 5개의 포스트
 paginate: 3
 paginate_path: "/blog/page:num"
+plugins:
+  - jekyll-paginate
 
 markdown: kramdown
 theme: minima
 
-plugins:
-  - jekyll-paginate
+
 
 
