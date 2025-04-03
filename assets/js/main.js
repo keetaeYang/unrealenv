@@ -24,8 +24,6 @@ function togglePlay() {
 
 // DOMContentLoaded 이벤트 리스너를 통합하여 초기화 코드 실행
 document.addEventListener("DOMContentLoaded", function () {
-  // 페이지 로딩 완료 후 body에 loaded 클래스 추가 (페이드 인 애니메이션)
-  document.body.classList.add("loaded");
 
   // 폼 전송 이벤트 리스너 (중복 제거)
   const form = document.getElementById("contactForm");
