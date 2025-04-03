@@ -127,9 +127,14 @@ header {
   color: white;
   text-align: center;
   padding: 20px;
+  aspect-ratio: 16 / 9; /* 모바일과 데스크탑 공통 대응 */
 }
 .hero-bg {
   background-image: url('/assets/images/forest_hero.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh; /* or specific px if known */
 }
 .hero .btn {
   display: inline-block;
