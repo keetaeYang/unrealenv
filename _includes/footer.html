@@ -1,4 +1,18 @@
 <footer>
   <p>© 2025 SSample. All rights reserved.</p>
   <p>문의: <a href="mailto:ssample3d@gmail.com">ssample3d@gmail.com</a></p>
+  <a href="#" class="back-to-top" aria-label="맨 위로 이동">↑</a>
+
 </footer>
+
+<script>
+  const backToTop = document.querySelector('.back-to-top');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 200) {
+      backToTop.classList.add('show');
+    } else {
+      backToTop.classList.remove('show');
+    }
+  });
+</script>
+

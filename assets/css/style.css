@@ -37,6 +37,33 @@ header {
     z-index: 1000;
     box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
+.sticky-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #fff;
+  border-bottom: 1px solid #e0e0e0;
+}
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #333;
+  color: #fff;
+  font-size: 24px;
+  width: 45px;
+  height: 45px;
+  text-align: center;
+  line-height: 45px;
+  border-radius: 50%;
+  display: none;
+  z-index: 1001;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+.back-to-top.show {
+  display: block;
+}
+
 .relative {
   position: relative;
 }
