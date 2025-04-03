@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "언리얼 엔진 피벗(Pivot) 이해와 활용법"
-date: 2024-04-04
+date: 2025-04-04
 categories: [Unreal Engine, 기능 설명]
 tags: [언리얼 엔진, 피벗 포인트, 작업 효율, 3D 모델링, UE5]
 description: "언리얼 엔진에서 피벗(Pivot) 시스템의 개념과 사용법을 자세히 알아보고, 피벗을 활용한 효율적인 작업 방법을 소개합니다."

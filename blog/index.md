@@ -4,7 +4,7 @@ title: "블로그"
 permalink: /blog/
 pagination:
   enabled: true
-  offset: 3
+  offset: 0
 ---
 <div class="card-wrapper">
 {% for post in paginator.posts %}

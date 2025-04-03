@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "언리얼 엔진과 버추얼 프로덕션: 콘텐츠 제작의 혁신"
-date: 2024-04-03
+date: 2025-04-03
 categories: [Unreal Engine, Virtual Production]
 tags: [언리얼 엔진, 버추얼 프로덕션, Unreal Engine 5, LED Wall, 실시간 합성, 영화 제작, 방송 기술]
 description: "언리얼 엔진을 중심으로 한 버추얼 프로덕션의 정의, 장점, 실제 활용 사례를 소개합니다. 실시간 합성과 LED 월 기반 콘텐츠 제작의 미래를 만나보세요."
