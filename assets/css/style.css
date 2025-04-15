@@ -415,6 +415,9 @@ header {
   .logo-flex img {
     height: 28px;
   }
+  .nav {
+    padding: 0.4em 1em;
+  }
 }
 
 /* Team Section */
