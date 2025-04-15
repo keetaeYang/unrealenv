@@ -1,7 +1,12 @@
 <header class="site-header sticky-header">
   <div class="nav">
     <a class="logo logo-flex" href="{{ "/" | relative_url }}">
-      <img src="/assets/images/logo.png" alt="SSample 로고" loading="lazy" />
+      <img 
+        src="/assets/images/logo.webp" 
+        alt="SSample 로고" 
+        width="300" height="80"
+        loading="eager" 
+        fetchpriority="high" />
       <span class="logo-text">SSample</span>
     </a>
     <nav class="desktop-nav">
