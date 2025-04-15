@@ -119,7 +119,6 @@ header {
 
 /* Hero */
 .hero {
-  background-image: url('/assets/images/forest_hero.webp');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -137,6 +136,15 @@ header {
   padding: 20px;
   position: relative;
   overflow: hidden;
+}
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
 }
 
 .hero-content {
